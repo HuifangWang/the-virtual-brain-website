@@ -6,7 +6,7 @@
         <li><a href="{{ pathto('web_interface') }}">web interface</a>|&nbsp;</li>
 	<li><a href="{{ pathto('console_interface') }}">console interface</a>|&nbsp;</li>
 	<li><a href="{{ pathto('api/index') }}">API</a>|&nbsp;</li>
-	<li><a href="{{ pathto('developer') }}">Developer (Github)</a>|&nbsp;</li>
+	<li><a href="https://github.com/the-virtual-brain">Developer (Github)</a>|&nbsp;</li>
 {% endblock %}
 
 
