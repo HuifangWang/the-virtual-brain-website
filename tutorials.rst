@@ -125,13 +125,13 @@ Use Cases
     with a rectangular pulse train. Two simulations are launched to produce resting state and 
     stimulation-driven activity. 
 
-* `Modeling The Impact Of Structural Lesions <https://www.dropbox.com/sh/44e8k1t8hpb1r9z/KO5YRW7_Pg>`_:
+* `Modeling The Impact Of Structural Lesions`:
 
-    * Part I <>
+    * Part I: Modeling Lesions <http://nbviewer.ipython.org/github/the-virtual-brain/scientific_library/blob/trunk/tvb/simulator/doc/tutorials/Tutorial_Modeling_The_Impact_Of_Structural_Lesions/Tutorial_Modeling_The_Impact_Of_Structural_Lesions_Part_I.ipynb>_
     
-    * Part II <>
+    * Part II: The Brain Network Model <http://nbviewer.ipython.org/github/the-virtual-brain/scientific_library/blob/trunk/tvb/simulator/doc/tutorials/Tutorial_Modeling_The_Impact_Of_Structural_Lesions/Tutorial_Modeling_The_Impact_Of_Structural_Lesions_Part_II.ipynb>
     
-    * Part III <>
+    * Part III: Offline Analysis <http://nbviewer.ipython.org/github/the-virtual-brain/scientific_library/blob/trunk/tvb/simulator/doc/tutorials/Tutorial_Modeling_The_Impact_Of_Structural_Lesions/Tutorial_Modeling_The_Impact_Of_Structural_Lesions_Part_III.ipynb>
     
     In this tutorial we aimed to:
         + reproduce the results presented in [(Alstott et al. 2009)][alstott2009] using TVB aiming to
@@ -145,7 +145,7 @@ Use Cases
           In TVB architecture, structural connectivity is one parameter of a BNM; and
         
         + to create a reproducible project, make it publicly available to improve 
-          the experience of the reviewers and readers. A folder with the data is included.
+          the experience of the reviewers and readers. A folder with the data <https://www.dropbox.com/sh/44e8k1t8hpb1r9z/KO5YRW7_Pg>_ is included .
           
 [alstott2009]: http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1000408
 
