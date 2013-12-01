@@ -105,7 +105,7 @@ Basic
 Reproducibility
 =============================
 
-* `Reproducing Sanz Leon etal 2013 -- Evoked Responses <http://nbviewer.ipython.org/urls/raw.github.com/the-virtual-brain/scientific_library/trunk/tvb/simulator/doc/tutorials/Tutorial_Evoked_Responses_In_The_Visual_Cortex/Tutorial_Evoked_Responses_In_The_Visual_Cortex.ipynb>`_
+* `Reproducing Sanz Leon et al. 2013 -- Evoked Responses <http://nbviewer.ipython.org/urls/raw.github.com/the-virtual-brain/scientific_library/trunk/tvb/simulator/doc/tutorials/Tutorial_Evoked_Responses_In_The_Visual_Cortex/Tutorial_Evoked_Responses_In_The_Visual_Cortex.ipynb>`_
     This tutorial reproduces the Evoked Responses in the Visual Cortex example 
     presented in [Sanz Leon *etal* 2013][sl2013a]:
 
@@ -113,6 +113,7 @@ Reproducibility
         The Virtual Brain: a simulator of primate brain dynamics. Frontiers in Neuroinformatics.
 
 [sl2013a]: http://www.frontiersin.org/neuroinformatics/10.3389/fninf.2013.00010/full
+
 
 -------------------------------------------------------------------------------
 
@@ -123,6 +124,30 @@ Use Cases
     This tutorial explains how to model evoked reponses when stimulating the primary visual cortex (V1)
     with a rectangular pulse train. Two simulations are launched to produce resting state and 
     stimulation-driven activity. 
+
+* `Modeling The Impact Of Structural Lesions <https://www.dropbox.com/sh/44e8k1t8hpb1r9z/KO5YRW7_Pg>`:
+
+    * Part I <>
+    
+    * Part II <>
+    
+    * Part III <>
+    
+    In this tutorial we aimed to:
+        + reproduce the results presented in [(Alstott et al. 2009)][alstott2009] using TVB aiming to
+          define a set of standardized lesion strategies for simulation studies of
+          Brain Network Models (BNMs);
+
+        + extend the original work by studying the role of conduction speed (i.e.,
+          time delays) on the healthy and lesioned networks;
+
+        + systematically explore the impact of structural changes in the dynamics. 
+          In TVB architecture, structural connectivity is one parameter of a BNM; and
+        
+        + to create a reproducible project, make it publicly available to improve 
+          the experience of the reviewers and readers. A folder with the data is included.
+          
+[alstott2009]: http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1000408
 
 -------------------------------------------------------------------------------
 
