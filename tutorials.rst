@@ -125,7 +125,7 @@ Use Cases
     with a rectangular pulse train. Two simulations are launched to produce resting state and 
     stimulation-driven activity. 
 
-* `Modeling The Impact Of Structural Lesions <https://www.dropbox.com/sh/44e8k1t8hpb1r9z/KO5YRW7_Pg>`:
+* `Modeling The Impact Of Structural Lesions <https://www.dropbox.com/sh/44e8k1t8hpb1r9z/KO5YRW7_Pg>`_:
 
     * Part I <>
     
