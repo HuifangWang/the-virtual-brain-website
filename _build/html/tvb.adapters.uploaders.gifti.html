@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -13,7 +15,7 @@
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
+        URL_ROOT:    '',
         VERSION:     '2.7',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -23,10 +25,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="tvb_doc 2.7 documentation" href="index.html" />
-    <link rel="up" title="uploaders Package" href="tvb.adapters.uploaders.html" />
-    <link rel="next" title="nifti Package" href="tvb.adapters.uploaders.nifti.html" />
-    <link rel="prev" title="uploaders Package" href="tvb.adapters.uploaders.html" /> 
+    <link rel="top" title="tvb_doc 2.7 documentation" href="index.html" /> 
   </head>
   <body>
 
@@ -43,21 +42,12 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="right" >
-          <a href="tvb.adapters.uploaders.nifti.html" title="nifti Package"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="tvb.adapters.uploaders.html" title="uploaders Package"
-             accesskey="P">previous</a> |</li>
         <li><a href="index.html">home</a>|&nbsp;</li>
         <li><a href="web_interface.html">web interface</a>|&nbsp;</li>
 	<li><a href="console_interface.html">console interface</a>|&nbsp;</li>
 	<li><a href="api.html">API</a>|&nbsp;</li>
-	<li><a href="https://github.com/the-virtual-brain">Developer (Github)</a>|&nbsp;</li>
-
-          <li><a href="tvb.html" >tvb Package</a> &raquo;</li>
-          <li><a href="tvb.adapters.html" >adapters Package</a> &raquo;</li>
-          <li><a href="tvb.adapters.uploaders.html" accesskey="U">uploaders Package</a> &raquo;</li> 
+	<li><a href="developer.html">Developer</a>|&nbsp;</li>
+ 
       </ul>
     </div>
 
@@ -67,19 +57,13 @@
   <ul>
 <li><a class="reference internal" href="#">gifti Package</a><ul>
 <li><a class="reference internal" href="#module-tvb.adapters.uploaders.gifti.gifti"><tt class="docutils literal"><span class="pre">gifti</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-tvb.adapters.uploaders.gifti.gifti_parser"><tt class="docutils literal"><span class="pre">gifti_parser</span></tt> Module</a></li>
+<li><a class="reference internal" href="#gifti-parser-module"><tt class="docutils literal"><span class="pre">gifti_parser</span></tt> Module</a></li>
 <li><a class="reference internal" href="#module-tvb.adapters.uploaders.gifti.parse_gifti_fast"><tt class="docutils literal"><span class="pre">parse_gifti_fast</span></tt> Module</a></li>
 <li><a class="reference internal" href="#module-tvb.adapters.uploaders.gifti.util"><tt class="docutils literal"><span class="pre">util</span></tt> Module</a></li>
 </ul>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="tvb.adapters.uploaders.html"
-                        title="previous chapter">uploaders Package</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="tvb.adapters.uploaders.nifti.html"
-                        title="next chapter">nifti Package</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/tvb.adapters.uploaders.gifti.txt"
@@ -377,56 +361,8 @@ filename when saving each specific type of data:</p>
 </dd></dl>
 
 </div>
-<div class="section" id="module-tvb.adapters.uploaders.gifti.gifti_parser">
-<span id="gifti-parser-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">gifti_parser</span></tt> Module<a class="headerlink" href="#module-tvb.adapters.uploaders.gifti.gifti_parser" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="tvb.adapters.uploaders.gifti.gifti_parser.GIFTIParser">
-<em class="property">class </em><tt class="descclassname">tvb.adapters.uploaders.gifti.gifti_parser.</tt><tt class="descname">GIFTIParser</tt><big>(</big><em>storage_path</em>, <em>operation_id</em><big>)</big><a class="headerlink" href="#tvb.adapters.uploaders.gifti.gifti_parser.GIFTIParser" title="Permalink to this definition">¶</a></dt>
-<dd><p>This class reads content of a GIFTI file and builds / returns a Surface instance 
-filled with details.</p>
-<dl class="attribute">
-<dt id="tvb.adapters.uploaders.gifti.gifti_parser.GIFTIParser.ASP_ATTR">
-<tt class="descname">ASP_ATTR</tt><em class="property"> = 'AnatomicalStructurePrimary'</em><a class="headerlink" href="#tvb.adapters.uploaders.gifti.gifti_parser.GIFTIParser.ASP_ATTR" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="tvb.adapters.uploaders.gifti.gifti_parser.GIFTIParser.DATE_ATTR">
-<tt class="descname">DATE_ATTR</tt><em class="property"> = 'Date'</em><a class="headerlink" href="#tvb.adapters.uploaders.gifti.gifti_parser.GIFTIParser.DATE_ATTR" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="tvb.adapters.uploaders.gifti.gifti_parser.GIFTIParser.DESCRIPTION_ATTR">
-<tt class="descname">DESCRIPTION_ATTR</tt><em class="property"> = 'Description'</em><a class="headerlink" href="#tvb.adapters.uploaders.gifti.gifti_parser.GIFTIParser.DESCRIPTION_ATTR" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="tvb.adapters.uploaders.gifti.gifti_parser.GIFTIParser.NAME_ATTR">
-<tt class="descname">NAME_ATTR</tt><em class="property"> = 'Name'</em><a class="headerlink" href="#tvb.adapters.uploaders.gifti.gifti_parser.GIFTIParser.NAME_ATTR" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="tvb.adapters.uploaders.gifti.gifti_parser.GIFTIParser.SUBJECT_ATTR">
-<tt class="descname">SUBJECT_ATTR</tt><em class="property"> = 'SubjectID'</em><a class="headerlink" href="#tvb.adapters.uploaders.gifti.gifti_parser.GIFTIParser.SUBJECT_ATTR" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="tvb.adapters.uploaders.gifti.gifti_parser.GIFTIParser.TIME_STEP_ATTR">
-<tt class="descname">TIME_STEP_ATTR</tt><em class="property"> = 'TimeStep'</em><a class="headerlink" href="#tvb.adapters.uploaders.gifti.gifti_parser.GIFTIParser.TIME_STEP_ATTR" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="tvb.adapters.uploaders.gifti.gifti_parser.GIFTIParser.UNIQUE_ID_ATTR">
-<tt class="descname">UNIQUE_ID_ATTR</tt><em class="property"> = 'UniqueID'</em><a class="headerlink" href="#tvb.adapters.uploaders.gifti.gifti_parser.GIFTIParser.UNIQUE_ID_ATTR" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tvb.adapters.uploaders.gifti.gifti_parser.GIFTIParser.parse">
-<tt class="descname">parse</tt><big>(</big><em>data_file</em><big>)</big><a class="headerlink" href="#tvb.adapters.uploaders.gifti.gifti_parser.GIFTIParser.parse" title="Permalink to this definition">¶</a></dt>
-<dd><p>Parse NIFTI file and returns TimeSeries for it.</p>
-</dd></dl>
-
-</dd></dl>
-
+<div class="section" id="gifti-parser-module">
+<h2><tt class="xref py py-mod docutils literal"><span class="pre">gifti_parser</span></tt> Module<a class="headerlink" href="#gifti-parser-module" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-tvb.adapters.uploaders.gifti.parse_gifti_fast">
 <span id="parse-gifti-fast-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">parse_gifti_fast</span></tt> Module<a class="headerlink" href="#module-tvb.adapters.uploaders.gifti.parse_gifti_fast" title="Permalink to this headline">¶</a></h2>
@@ -957,26 +893,17 @@ filled with details.</p>
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="right" >
-          <a href="tvb.adapters.uploaders.nifti.html" title="nifti Package"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="tvb.adapters.uploaders.html" title="uploaders Package"
-             >previous</a> |</li>
         <li><a href="index.html">home</a>|&nbsp;</li>
         <li><a href="web_interface.html">web interface</a>|&nbsp;</li>
 	<li><a href="console_interface.html">console interface</a>|&nbsp;</li>
 	<li><a href="api.html">API</a>|&nbsp;</li>
-	<li><a href="https://github.com/the-virtual-brain">Developer (Github)</a>|&nbsp;</li>
-
-          <li><a href="tvb.html" >tvb Package</a> &raquo;</li>
-          <li><a href="tvb.adapters.html" >adapters Package</a> &raquo;</li>
-          <li><a href="tvb.adapters.uploaders.html" >uploaders Package</a> &raquo;</li> 
+	<li><a href="developer.html">Developer</a>|&nbsp;</li>
+ 
       </ul>
     </div>
     <div class="footer">
         &copy; Copyright 2013, timpx.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
     </div>
   </body>
 </html>

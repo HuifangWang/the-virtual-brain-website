@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -13,7 +15,7 @@
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
+        URL_ROOT:    '',
         VERSION:     '2.7',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -44,7 +46,7 @@
         <li><a href="web_interface.html">web interface</a>|&nbsp;</li>
 	<li><a href="console_interface.html">console interface</a>|&nbsp;</li>
 	<li><a href="api.html">API</a>|&nbsp;</li>
-	<li><a href="https://github.com/the-virtual-brain">Developer (Github)</a>|&nbsp;</li>
+	<li><a href="developer.html">Developer</a>|&nbsp;</li>
  
       </ul>
     </div>
@@ -106,7 +108,7 @@ Keeps track of the adapter interface, the group and the UI name. In case of
 sub-algorithm also keep the prefix, and the pair {sub-algorithm : name}</p>
 <dl class="attribute">
 <dt id="tvb.core.entities.transient.burst_configuration_entities.AdapterConfiguration.ui_name">
-<tt class="descname">ui_name</tt><em class="property"> None</em><a class="headerlink" href="#tvb.core.entities.transient.burst_configuration_entities.AdapterConfiguration.ui_name" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">ui_name</tt><a class="headerlink" href="#tvb.core.entities.transient.burst_configuration_entities.AdapterConfiguration.ui_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>UI title</p>
 </dd></dl>
 
@@ -126,14 +128,14 @@ sub-entities (workflow steps) are persisted in db.</p>
 
 <dl class="attribute">
 <dt id="tvb.core.entities.transient.burst_configuration_entities.PortletConfiguration.index_in_tab">
-<tt class="descname">index_in_tab</tt><em class="property"> None</em><a class="headerlink" href="#tvb.core.entities.transient.burst_configuration_entities.PortletConfiguration.index_in_tab" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">index_in_tab</tt><a class="headerlink" href="#tvb.core.entities.transient.burst_configuration_entities.PortletConfiguration.index_in_tab" title="Permalink to this definition">¶</a></dt>
 <dd><p>If it was a burst-launched portlet, it should have a visualizer and then
 the index in tab from that entity is considered the portlet configuration index in tab.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="tvb.core.entities.transient.burst_configuration_entities.PortletConfiguration.name">
-<tt class="descname">name</tt><em class="property"> None</em><a class="headerlink" href="#tvb.core.entities.transient.burst_configuration_entities.PortletConfiguration.name" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">name</tt><a class="headerlink" href="#tvb.core.entities.transient.burst_configuration_entities.PortletConfiguration.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the portlet configuration is taken from the name of the
 workflow steps that were stored for it.</p>
 </dd></dl>
@@ -249,7 +251,7 @@ It also contains metadata on how this details will be displayed in UI (disabled/
 
 <dl class="attribute">
 <dt id="tvb.core.entities.transient.context_overlay.CommonDetails.meta_attributes_list">
-<tt class="descname">meta_attributes_list</tt><em class="property"> None</em><a class="headerlink" href="#tvb.core.entities.transient.context_overlay.CommonDetails.meta_attributes_list" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">meta_attributes_list</tt><a class="headerlink" href="#tvb.core.entities.transient.context_overlay.CommonDetails.meta_attributes_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list with all attributes for a DataType which are expected to be submitted from UI.</p>
 </dd></dl>
 
@@ -584,7 +586,7 @@ It should contain enough information, to restore a DataType entity, without DB p
 
 <dl class="attribute">
 <dt id="tvb.core.entities.transient.structure_entities.DataTypeMetaData.create_date">
-<tt class="descname">create_date</tt><em class="property"> None</em><a class="headerlink" href="#tvb.core.entities.transient.structure_entities.DataTypeMetaData.create_date" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">create_date</tt><a class="headerlink" href="#tvb.core.entities.transient.structure_entities.DataTypeMetaData.create_date" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the create date of this entity, if stored, or None otherwise.</p>
 </dd></dl>
 
@@ -598,7 +600,7 @@ corresponding DataTypeMetaData object.</p>
 
 <dl class="attribute">
 <dt id="tvb.core.entities.transient.structure_entities.DataTypeMetaData.group">
-<tt class="descname">group</tt><em class="property"> None</em><a class="headerlink" href="#tvb.core.entities.transient.structure_entities.DataTypeMetaData.group" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">group</tt><a class="headerlink" href="#tvb.core.entities.transient.structure_entities.DataTypeMetaData.group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the group tag in which the operation was launched</p>
 </dd></dl>
 
@@ -617,7 +619,7 @@ e.g. Because of a missing associated file.</p>
 
 <dl class="attribute">
 <dt id="tvb.core.entities.transient.structure_entities.DataTypeMetaData.subject">
-<tt class="descname">subject</tt><em class="property"> None</em><a class="headerlink" href="#tvb.core.entities.transient.structure_entities.DataTypeMetaData.subject" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">subject</tt><a class="headerlink" href="#tvb.core.entities.transient.structure_entities.DataTypeMetaData.subject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the name of the Subject if defined, or Default &#8220;John Doe&#8221;.</p>
 </dd></dl>
 
@@ -641,7 +643,7 @@ e.g. Because of a missing associated file.</p>
 
 <dl class="attribute">
 <dt id="tvb.core.entities.transient.structure_entities.GenericMetaData.file_name">
-<tt class="descname">file_name</tt><em class="property"> None</em><a class="headerlink" href="#tvb.core.entities.transient.structure_entities.GenericMetaData.file_name" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">file_name</tt><a class="headerlink" href="#tvb.core.entities.transient.structure_entities.GenericMetaData.file_name" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -654,7 +656,7 @@ e.g. Because of a missing associated file.</p>
 
 <dl class="attribute">
 <dt id="tvb.core.entities.transient.structure_entities.GenericMetaData.gid">
-<tt class="descname">gid</tt><em class="property"> None</em><a class="headerlink" href="#tvb.core.entities.transient.structure_entities.GenericMetaData.gid" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">gid</tt><a class="headerlink" href="#tvb.core.entities.transient.structure_entities.GenericMetaData.gid" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -708,26 +710,26 @@ e.g. Because of a missing associated file.</p>
 
 <dl class="attribute">
 <dt id="tvb.core.entities.transient.structure_entities.StructureNode.has_children">
-<tt class="descname">has_children</tt><em class="property"> None</em><a class="headerlink" href="#tvb.core.entities.transient.structure_entities.StructureNode.has_children" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">has_children</tt><a class="headerlink" href="#tvb.core.entities.transient.structure_entities.StructureNode.has_children" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return TRUE when current node is with Child nodes.
 Return FALSE when current node is a leaf in Tree.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="tvb.core.entities.transient.structure_entities.StructureNode.is_group">
-<tt class="descname">is_group</tt><em class="property"> None</em><a class="headerlink" href="#tvb.core.entities.transient.structure_entities.StructureNode.is_group" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">is_group</tt><a class="headerlink" href="#tvb.core.entities.transient.structure_entities.StructureNode.is_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if meta_data has the transient is_link attribute set.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="tvb.core.entities.transient.structure_entities.StructureNode.is_irelevant">
-<tt class="descname">is_irelevant</tt><em class="property"> None</em><a class="headerlink" href="#tvb.core.entities.transient.structure_entities.StructureNode.is_irelevant" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">is_irelevant</tt><a class="headerlink" href="#tvb.core.entities.transient.structure_entities.StructureNode.is_irelevant" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check that current node is marked as not-relevant.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="tvb.core.entities.transient.structure_entities.StructureNode.is_link">
-<tt class="descname">is_link</tt><em class="property"> None</em><a class="headerlink" href="#tvb.core.entities.transient.structure_entities.StructureNode.is_link" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">is_link</tt><a class="headerlink" href="#tvb.core.entities.transient.structure_entities.StructureNode.is_link" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if meta_data has the transient is_link attribute set.</p>
 </dd></dl>
 
@@ -743,7 +745,7 @@ into the data dict of each DataTypeMetaData object.</p>
 
 <dl class="attribute">
 <dt id="tvb.core.entities.transient.structure_entities.StructureNode.type">
-<tt class="descname">type</tt><em class="property"> None</em><a class="headerlink" href="#tvb.core.entities.transient.structure_entities.StructureNode.type" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">type</tt><a class="headerlink" href="#tvb.core.entities.transient.structure_entities.StructureNode.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type of a node it can be FOLDER, FILE or INVALID.</p>
 </dd></dl>
 
@@ -771,13 +773,13 @@ into the data dict of each DataTypeMetaData object.</p>
         <li><a href="web_interface.html">web interface</a>|&nbsp;</li>
 	<li><a href="console_interface.html">console interface</a>|&nbsp;</li>
 	<li><a href="api.html">API</a>|&nbsp;</li>
-	<li><a href="https://github.com/the-virtual-brain">Developer (Github)</a>|&nbsp;</li>
+	<li><a href="developer.html">Developer</a>|&nbsp;</li>
  
       </ul>
     </div>
     <div class="footer">
         &copy; Copyright 2013, timpx.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
     </div>
   </body>
 </html>

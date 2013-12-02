@@ -33,6 +33,7 @@ A pdf version of this document can be found here_
    tvb.simulator.power_spectra_interactive
    tvb.simulator.timeseries_interactive
    
+
    tvb.simulator.devguide
 
 .. ##Alas, there art none with a screen so large... Not evenst thou.

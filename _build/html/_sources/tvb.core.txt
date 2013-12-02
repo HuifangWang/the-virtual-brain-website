@@ -35,10 +35,12 @@ core Package
     :undoc-members:
     :show-inheritance:
 
+
 Subpackages
 -----------
 
 .. toctree::
+    maxdepth: 2
 
     tvb.core.adapters
     tvb.core.code_versions

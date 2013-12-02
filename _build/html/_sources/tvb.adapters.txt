@@ -6,7 +6,7 @@ adapters Package
 
 
 .. toctree::
-    maxdepth: 2
+    :maxdepth: 2
 
     tvb.adapters.analyzers
     tvb.adapters.creators

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -44,7 +46,7 @@
         <li><a href="../../../web_interface.html">web interface</a>|&nbsp;</li>
 	<li><a href="../../../console_interface.html">console interface</a>|&nbsp;</li>
 	<li><a href="../../../api.html">API</a>|&nbsp;</li>
-	<li><a href="https://github.com/the-virtual-brain">Developer (Github)</a>|&nbsp;</li>
+	<li><a href="../../../developer.html">Developer</a>|&nbsp;</li>
  
       </ul>
     </div>
@@ -79,7 +81,7 @@
             
   <div class="section" id="noise">
 <h1><tt class="xref py py-mod docutils literal"><span class="pre">Noise</span></tt><a class="headerlink" href="#noise" title="Permalink to this headline">¶</a></h1>
-<a class="reference external image-reference" href="_images/classes_noise.svg"><div align="center" class="align-center"><img alt="Class diagram for tvb.simulator.noise" height="300px" src="../../../_images/classes_noise.svg" /></div>
+<a class="reference external image-reference" href="_images/classes_noise.svg"><div align="center" class="align-center"><img alt="Class diagram for tvb.simulator.noise" height="300px" src="../../../_images/classes_noise1.svg" /></div>
 </a>
 <span class="target" id="module-tvb.simulator.noise"></span><p>A collection of noise related classes and functions.</p>
 <p>Specific noises inherit from the abstract class Noise, with each instance having
@@ -87,7 +89,7 @@ its own RandomStream attribute &#8211; which is itself a Traited wrapper of Nump
 RandomState.</p>
 <dl class="attribute">
 <dt id="tvb.simulator.noise.RandomStream">
-<tt class="descclassname">tvb.simulator.noise.</tt><tt class="descname">RandomStream</tt><em class="property"> None</em><a class="headerlink" href="#tvb.simulator.noise.RandomStream" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">tvb.simulator.noise.</tt><tt class="descname">RandomStream</tt><a class="headerlink" href="#tvb.simulator.noise.RandomStream" title="Permalink to this definition">¶</a></dt>
 <dd><p>This class provides the ability to create multiple random streams which can
 be independently seeded or set to an explicit state.</p>
 <dl class="method">
@@ -117,32 +119,17 @@ previous simulation.</p>
 </div></blockquote>
 </dd></dl>
 
-<dl class="class">
+<dl class="attribute">
 <dt id="tvb.simulator.noise.noise_device_info">
-<em class="property">class </em><tt class="descclassname">tvb.simulator.noise.</tt><tt class="descname">noise_device_info</tt><big>(</big><em>pars=</em><span class="optional">[</span><span class="optional">]</span>, <em>kernel=''</em><big>)</big><a class="headerlink" href="#tvb.simulator.noise.noise_device_info" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">tvb.simulator.noise.</tt><tt class="descname">noise_device_info</tt><a class="headerlink" href="#tvb.simulator.noise.noise_device_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Utility class that allows Noise subclass to annotate their requirements
 for their gfun to run on a device</p>
 <p>Please see tvb.sim.models.model_device_info</p>
-<dl class="attribute">
-<dt id="tvb.simulator.noise.noise_device_info.n_nspr">
-<tt class="descname">n_nspr</tt><em class="property"> None</em><a class="headerlink" href="#tvb.simulator.noise.noise_device_info.n_nspr" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="tvb.simulator.noise.noise_device_info.nspr">
-<tt class="descname">nspr</tt><em class="property"> None</em><a class="headerlink" href="#tvb.simulator.noise.noise_device_info.nspr" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="tvb.simulator.noise.noise_device_info.kernel">
-<tt class="descname">kernel</tt><em class="property"> None</em><a class="headerlink" href="#tvb.simulator.noise.noise_device_info.kernel" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 </dd></dl>
 
 <dl class="attribute">
 <dt id="tvb.simulator.noise.Noise">
-<tt class="descclassname">tvb.simulator.noise.</tt><tt class="descname">Noise</tt><em class="property"> None</em><a class="headerlink" href="#tvb.simulator.noise.Noise" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">tvb.simulator.noise.</tt><tt class="descname">Noise</tt><a class="headerlink" href="#tvb.simulator.noise.Noise" title="Permalink to this definition">¶</a></dt>
 <dd><p>Defines a base class for noise. Specific noises are derived from this class
 for use in stochastic integrations.</p>
 <table class="docutils citation" frame="void" id="kloedenplaten-1995" rules="none">
@@ -199,21 +186,22 @@ default parameter set should be provided via the trait mechanism.</p>
 <dt id="tvb.simulator.noise.Noise.white">
 <tt class="descclassname">Noise.</tt><tt class="descname">white</tt><big>(</big><em>shape</em><big>)</big><a class="headerlink" href="#tvb.simulator.noise.Noise.white" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return Gaussian random variates as an array of shape <tt class="docutils literal"><span class="pre">shape</span></tt>, with the
-amplitude scaled by <span class="math">\(\sqrt{dt}\)</span>
-.</p>
+amplitude scaled by <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msqrt>
+<mrow><mi>d</mi><mi>t</mi></mrow></msqrt></mrow></math>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="tvb.simulator.noise.Noise.coloured">
 <tt class="descclassname">Noise.</tt><tt class="descname">coloured</tt><big>(</big><em>shape</em><big>)</big><a class="headerlink" href="#tvb.simulator.noise.Noise.coloured" title="Permalink to this definition">¶</a></dt>
-<dd><p>See, <a class="reference internal" href="../../../tvb.simulator.noise.html#foxvemuri-1988" id="id2">[FoxVemuri_1988]</a></p>
+<dd><p>See, <a class="reference internal" href="#foxvemuri-1988">[FoxVemuri_1988]</a></p>
 </dd></dl>
 
 <p><strong>traits on this class:</strong></p>
 <blockquote>
 <div><dl class="docutils">
-<dt><tt class="docutils literal"><span class="pre">ntau</span></tt> (<span class="math">\(\tau\)</span>
-)</dt>
+<dt><tt class="docutils literal"><span class="pre">ntau</span></tt> (<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>τ</mi></mrow></math>)</dt>
 <dd><div class="first last line-block">
 <div class="line">The noise correlation time</div>
 <div class="line"><tt class="docutils literal"><span class="pre">default</span></tt>:  0.0 </div>
@@ -231,7 +219,7 @@ amplitude scaled by <span class="math">\(\sqrt{dt}\)</span>
 
 <dl class="attribute">
 <dt id="tvb.simulator.noise.Additive">
-<tt class="descclassname">tvb.simulator.noise.</tt><tt class="descname">Additive</tt><em class="property"> None</em><a class="headerlink" href="#tvb.simulator.noise.Additive" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">tvb.simulator.noise.</tt><tt class="descname">Additive</tt><a class="headerlink" href="#tvb.simulator.noise.Additive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Additive noise which, assuming the source noise is Gaussian with unit 
 variance, will result in noise with a standard deviation of nsig.</p>
 <dl class="method">
@@ -244,25 +232,27 @@ variance, will result in noise with a standard deviation of nsig.</p>
 <dt id="tvb.simulator.noise.Additive.gfun">
 <tt class="descclassname">Additive.</tt><tt class="descname">gfun</tt><big>(</big><em>state_variables</em><big>)</big><a class="headerlink" href="#tvb.simulator.noise.Additive.gfun" title="Permalink to this definition">¶</a></dt>
 <dd><p>Linear additive noise, thus it ignores the state_variables.</p>
-<div class="math">
-\begin{equation*}
-g(x) = \sqrt{2D}
-\end{equation*}
+<div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" mode="display">
+<mtable>
+<mtr>
+<mtd><mi>g</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><msqrt>
+<mrow><mn>2</mn><mi>D</mi></mrow></msqrt></mtd></mtr></mtable></math>
 </div>
 </dd></dl>
 
 <p><strong>traits on this class:</strong></p>
 <blockquote>
 <div><dl class="docutils">
-<dt><tt class="docutils literal"><span class="pre">nsig</span></tt> (<span class="math">\(D\)</span>
-)</dt>
+<dt><tt class="docutils literal"><span class="pre">nsig</span></tt> (<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>D</mi></mrow></math>)</dt>
 <dd><div class="first last line-block">
 <div class="line">The noise dispersion, it is the standard deviation of the          distribution from which the Gaussian random variates are drawn. NOTE:         Sensible values are typically ~&lt;&lt; 1% of the dynamic range of a Model&#8217;s         state variables.</div>
 <div class="line"><tt class="docutils literal"><span class="pre">default</span></tt>:  [ 1.] </div>
 </div>
 </dd>
-<dt><tt class="docutils literal"><span class="pre">ntau</span></tt> (<span class="math">\(\tau\)</span>
-)</dt>
+<dt><tt class="docutils literal"><span class="pre">ntau</span></tt> (<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>τ</mi></mrow></math>)</dt>
 <dd><div class="first last line-block">
 <div class="line">The noise correlation time</div>
 <div class="line"><tt class="docutils literal"><span class="pre">default</span></tt>:  0.0 </div>
@@ -280,20 +270,21 @@ g(x) = \sqrt{2D}
 
 <dl class="attribute">
 <dt id="tvb.simulator.noise.Multiplicative">
-<tt class="descclassname">tvb.simulator.noise.</tt><tt class="descname">Multiplicative</tt><em class="property"> None</em><a class="headerlink" href="#tvb.simulator.noise.Multiplicative" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">tvb.simulator.noise.</tt><tt class="descname">Multiplicative</tt><a class="headerlink" href="#tvb.simulator.noise.Multiplicative" title="Permalink to this definition">¶</a></dt>
 <dd><p>With &#8220;external&#8221; fluctuations the intensity of the noise often depends on 
 the state of the system. This results in the (general) stochastic
 differential formulation:</p>
-<div class="math">
-\begin{equation*}
-dX_t = a(X_t)\,dt + b(X_t)\,dW_t
-\end{equation*}
+<div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" mode="display">
+<mtable>
+<mtr>
+<mtd><mi>d</mi><msub><mi>X</mi><mi>t</mi></msub><mo>=</mo><mi>a</mi><mo>(</mo><msub><mi>X</mi><mi>t</mi></msub><mo>)</mo><mspace></mspace><mi>d</mi><mi>t</mi><mo>+</mo><mi>b</mi><mo>(</mo><msub><mi>X</mi><mi>t</mi></msub><mo>)</mo><mspace></mspace><mi>d</mi><msub><mi>W</mi><mi>t</mi></msub></mtd></mtr></mtable></math>
 </div>
-<p>for appropriate coefficients <span class="math">\(a(x)\)</span>
- and <span class="math">\(b(x)\)</span>
-, which might be
+<p>for appropriate coefficients <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>a</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow></math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>b</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow></math>, which might be
 constants.</p>
-<p>From <a class="reference internal" href="../../../tvb.simulator.noise.html#kloedenplaten-1995" id="id3">[KloedenPlaten_1995]</a>, Equation 1.9, page 104.</p>
+<p>From <a class="reference internal" href="#kloedenplaten-1995">[KloedenPlaten_1995]</a>, Equation 1.9, page 104.</p>
 <dl class="method">
 <dt id="tvb.simulator.noise.Multiplicative.__init__">
 <tt class="descclassname">Multiplicative.</tt><tt class="descname">__init__</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#tvb.simulator.noise.Multiplicative.__init__" title="Permalink to this definition">¶</a></dt>
@@ -304,32 +295,32 @@ constants.</p>
 <dt id="tvb.simulator.noise.Multiplicative.gfun">
 <tt class="descclassname">Multiplicative.</tt><tt class="descname">gfun</tt><big>(</big><em>state_variables</em><big>)</big><a class="headerlink" href="#tvb.simulator.noise.Multiplicative.gfun" title="Permalink to this definition">¶</a></dt>
 <dd><p>Scale the noise by the noise dispersion and the diffusion coefficient.
-By default, the diffusion coefficient <span class="math">\(b\)</span>
- is a constant.
+By default, the diffusion coefficient <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>b</mi></mrow></math> is a constant.
 It reduces to the simplest scheme of a linear SDE with Multiplicative 
-Noise: homogeneous constant coefficients. See <a class="reference internal" href="../../../tvb.simulator.noise.html#kloedenplaten-1995" id="id4">[KloedenPlaten_1995]</a>,
+Noise: homogeneous constant coefficients. See <a class="reference internal" href="#kloedenplaten-1995">[KloedenPlaten_1995]</a>,
 Equation 4.6, page 119.</p>
 </dd></dl>
 
 <p><strong>traits on this class:</strong></p>
 <blockquote>
 <div><dl class="docutils">
-<dt><tt class="docutils literal"><span class="pre">b</span></tt> (<span class="math">\(b\)</span>
-)</dt>
+<dt><tt class="docutils literal"><span class="pre">b</span></tt> (<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>b</mi></mrow></math>)</dt>
 <dd><div class="first last line-block">
 <div class="line">A function evaluated on the state-variables, the result of         which enters as the diffusion coefficient.</div>
 <div class="line"><tt class="docutils literal"><span class="pre">default</span></tt>:  Linear(bound=False, value=None) </div>
 </div>
 </dd>
-<dt><tt class="docutils literal"><span class="pre">nsig</span></tt> (<span class="math">\(D\)</span>
-)</dt>
+<dt><tt class="docutils literal"><span class="pre">nsig</span></tt> (<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>D</mi></mrow></math>)</dt>
 <dd><div class="first last line-block">
 <div class="line">The noise dispersion, it is the standard deviation of the          distribution from which the Gaussian random variates are drawn. NOTE:         Sensible values are typically ~&lt;&lt; 1% of the dynamic range of a Model&#8217;s         state variables.</div>
 <div class="line"><tt class="docutils literal"><span class="pre">default</span></tt>:  [ 1.] </div>
 </div>
 </dd>
-<dt><tt class="docutils literal"><span class="pre">ntau</span></tt> (<span class="math">\(\tau\)</span>
-)</dt>
+<dt><tt class="docutils literal"><span class="pre">ntau</span></tt> (<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>τ</mi></mrow></math>)</dt>
 <dd><div class="first last line-block">
 <div class="line">The noise correlation time</div>
 <div class="line"><tt class="docutils literal"><span class="pre">default</span></tt>:  0.0 </div>
@@ -347,27 +338,27 @@ Equation 4.6, page 119.</p>
 
 <dl class="attribute">
 <dt id="tvb.simulator.noise.MultiplicativeSimple">
-<tt class="descclassname">tvb.simulator.noise.</tt><tt class="descname">MultiplicativeSimple</tt><em class="property"> None</em><a class="headerlink" href="#tvb.simulator.noise.MultiplicativeSimple" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">tvb.simulator.noise.</tt><tt class="descname">MultiplicativeSimple</tt><a class="headerlink" href="#tvb.simulator.noise.MultiplicativeSimple" title="Permalink to this definition">¶</a></dt>
 <dd><p>Demo for device_info &#8211; defines simple multiplicate noise.</p>
 <p><strong>traits on this class:</strong></p>
 <blockquote>
 <div><dl class="docutils">
-<dt><tt class="docutils literal"><span class="pre">b</span></tt> (<span class="math">\(b\)</span>
-)</dt>
+<dt><tt class="docutils literal"><span class="pre">b</span></tt> (<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>b</mi></mrow></math>)</dt>
 <dd><div class="first last line-block">
 <div class="line">A function evaluated on the state-variables, the result of         which enters as the diffusion coefficient.</div>
 <div class="line"><tt class="docutils literal"><span class="pre">default</span></tt>:  Linear(bound=False, value=None) </div>
 </div>
 </dd>
-<dt><tt class="docutils literal"><span class="pre">nsig</span></tt> (<span class="math">\(D\)</span>
-)</dt>
+<dt><tt class="docutils literal"><span class="pre">nsig</span></tt> (<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>D</mi></mrow></math>)</dt>
 <dd><div class="first last line-block">
 <div class="line">The noise dispersion, it is the standard deviation of the          distribution from which the Gaussian random variates are drawn. NOTE:         Sensible values are typically ~&lt;&lt; 1% of the dynamic range of a Model&#8217;s         state variables.</div>
 <div class="line"><tt class="docutils literal"><span class="pre">default</span></tt>:  [ 1.] </div>
 </div>
 </dd>
-<dt><tt class="docutils literal"><span class="pre">ntau</span></tt> (<span class="math">\(\tau\)</span>
-)</dt>
+<dt><tt class="docutils literal"><span class="pre">ntau</span></tt> (<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>τ</mi></mrow></math>)</dt>
 <dd><div class="first last line-block">
 <div class="line">The noise correlation time</div>
 <div class="line"><tt class="docutils literal"><span class="pre">default</span></tt>:  0.0 </div>
@@ -404,13 +395,13 @@ Equation 4.6, page 119.</p>
         <li><a href="../../../web_interface.html">web interface</a>|&nbsp;</li>
 	<li><a href="../../../console_interface.html">console interface</a>|&nbsp;</li>
 	<li><a href="../../../api.html">API</a>|&nbsp;</li>
-	<li><a href="https://github.com/the-virtual-brain">Developer (Github)</a>|&nbsp;</li>
+	<li><a href="../../../developer.html">Developer</a>|&nbsp;</li>
  
       </ul>
     </div>
     <div class="footer">
         &copy; Copyright 2013, timpx.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
     </div>
   </body>
 </html>

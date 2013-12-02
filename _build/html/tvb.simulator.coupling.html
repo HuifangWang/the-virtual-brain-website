@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -13,7 +15,7 @@
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
+        URL_ROOT:    '',
         VERSION:     '2.7',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -23,10 +25,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="tvb_doc 2.7 documentation" href="index.html" />
-    <link rel="up" title="Welcome to tvb.simulator’s documentation!" href="tvb.simulator.html" />
-    <link rel="next" title="Models" href="tvb.simulator.models.html" />
-    <link rel="prev" title="Simulator" href="tvb.simulator.simulator.html" /> 
+    <link rel="top" title="tvb_doc 2.7 documentation" href="index.html" /> 
   </head>
   <body>
 
@@ -43,31 +42,17 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="right" >
-          <a href="tvb.simulator.models.html" title="Models"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="tvb.simulator.simulator.html" title="Simulator"
-             accesskey="P">previous</a> |</li>
         <li><a href="index.html">home</a>|&nbsp;</li>
         <li><a href="web_interface.html">web interface</a>|&nbsp;</li>
 	<li><a href="console_interface.html">console interface</a>|&nbsp;</li>
 	<li><a href="api.html">API</a>|&nbsp;</li>
-	<li><a href="https://github.com/the-virtual-brain">Developer (Github)</a>|&nbsp;</li>
-
-          <li><a href="tvb.html" >tvb Package</a> &raquo;</li>
-          <li><a href="tvb.simulator.html" accesskey="U">Welcome to tvb.simulator&#8217;s documentation!</a> &raquo;</li> 
+	<li><a href="developer.html">Developer</a>|&nbsp;</li>
+ 
       </ul>
     </div>
 
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="tvb.simulator.simulator.html"
-                        title="previous chapter"><tt class="docutils literal docutils literal"><span class="pre">Simulator</span></tt></a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="tvb.simulator.models.html"
-                        title="next chapter"><tt class="docutils literal"><span class="pre">Models</span></tt></a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/tvb.simulator.coupling.txt"
@@ -96,7 +81,7 @@
             
   <div class="section" id="coupling">
 <h1><tt class="xref py py-mod docutils literal"><span class="pre">Coupling</span></tt><a class="headerlink" href="#coupling" title="Permalink to this headline">¶</a></h1>
-<a class="reference external image-reference" href="_images/classes_coupling.svg"><div align="center" class="align-center"><img alt="Class diagram for tvb.simulator.coupling" height="300px" src="_images/classes_coupling1.svg" /></div>
+<a class="reference external image-reference" href="_images/classes_coupling.svg"><div align="center" class="align-center"><img alt="Class diagram for tvb.simulator.coupling" height="300px" src="_images/classes_coupling.svg" /></div>
 </a>
 <span class="target" id="module-tvb.simulator.coupling"></span><p>Coupling functions</p>
 <p>The activity (state-variables) that 
@@ -105,51 +90,36 @@ functions before entering the equations (Model.dfun()) describing the local
 dynamics.</p>
 <dl class="attribute">
 <dt id="tvb.simulator.coupling.Coupling">
-<tt class="descclassname">tvb.simulator.coupling.</tt><tt class="descname">Coupling</tt><em class="property"> None</em><a class="headerlink" href="#tvb.simulator.coupling.Coupling" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">tvb.simulator.coupling.</tt><tt class="descname">Coupling</tt><a class="headerlink" href="#tvb.simulator.coupling.Coupling" title="Permalink to this definition">¶</a></dt>
 <dd><p>The base class for Coupling functions.</p>
 <p><strong>traits on this class:</strong></p>
 </dd></dl>
 
-<dl class="class">
+<dl class="attribute">
 <dt id="tvb.simulator.coupling.coupling_device_info">
-<em class="property">class </em><tt class="descclassname">tvb.simulator.coupling.</tt><tt class="descname">coupling_device_info</tt><big>(</big><em>pars=</em><span class="optional">[</span><span class="optional">]</span>, <em>kernel=''</em><big>)</big><a class="headerlink" href="#tvb.simulator.coupling.coupling_device_info" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">tvb.simulator.coupling.</tt><tt class="descname">coupling_device_info</tt><a class="headerlink" href="#tvb.simulator.coupling.coupling_device_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Utility class that allows Coupling subclass to annotate their requirements
 for their gfun to run on a device</p>
 <p>Please see tvb.sim.models.model_device_info</p>
-<dl class="attribute">
-<dt id="tvb.simulator.coupling.coupling_device_info.n_cfpr">
-<tt class="descname">n_cfpr</tt><em class="property"> None</em><a class="headerlink" href="#tvb.simulator.coupling.coupling_device_info.n_cfpr" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="tvb.simulator.coupling.coupling_device_info.cfpr">
-<tt class="descname">cfpr</tt><em class="property"> None</em><a class="headerlink" href="#tvb.simulator.coupling.coupling_device_info.cfpr" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="tvb.simulator.coupling.coupling_device_info.kernel">
-<tt class="descname">kernel</tt><em class="property"> None</em><a class="headerlink" href="#tvb.simulator.coupling.coupling_device_info.kernel" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 </dd></dl>
 
 <dl class="attribute">
 <dt id="tvb.simulator.coupling.Linear">
-<tt class="descclassname">tvb.simulator.coupling.</tt><tt class="descname">Linear</tt><em class="property"> None</em><a class="headerlink" href="#tvb.simulator.coupling.Linear" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">tvb.simulator.coupling.</tt><tt class="descname">Linear</tt><a class="headerlink" href="#tvb.simulator.coupling.Linear" title="Permalink to this definition">¶</a></dt>
 <dd><p>Linear Coupling function.</p>
 <p><strong>traits on this class:</strong></p>
 <blockquote>
 <div><dl class="docutils">
-<dt><tt class="docutils literal"><span class="pre">a</span></tt> (<span class="math">\(a\)</span>
-)</dt>
+<dt><tt class="docutils literal"><span class="pre">a</span></tt> (<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>a</mi></mrow></math>)</dt>
 <dd><div class="first last line-block">
 <div class="line">Rescales the connection strength while maintaining the ratio         between different values.</div>
 <div class="line"><tt class="docutils literal"><span class="pre">default</span></tt>:  [ 0.00390625] </div>
 <div class="line"><tt class="docutils literal"><span class="pre">range</span></tt>: low = 0.0 ; high = 0.2 </div>
 </div>
 </dd>
-<dt><tt class="docutils literal"><span class="pre">b</span></tt> (<span class="math">\(b\)</span>
-)</dt>
+<dt><tt class="docutils literal"><span class="pre">b</span></tt> (<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>b</mi></mrow></math>)</dt>
 <dd><div class="first last line-block">
 <div class="line">Shifts the base of the connection strength while maintaining         the absolute difference between different values.</div>
 <div class="line"><tt class="docutils literal"><span class="pre">default</span></tt>:  [ 0.] </div>
@@ -161,7 +131,7 @@ for their gfun to run on a device</p>
 
 <dl class="attribute">
 <dt id="tvb.simulator.coupling.Scaling">
-<tt class="descclassname">tvb.simulator.coupling.</tt><tt class="descname">Scaling</tt><em class="property"> None</em><a class="headerlink" href="#tvb.simulator.coupling.Scaling" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">tvb.simulator.coupling.</tt><tt class="descname">Scaling</tt><a class="headerlink" href="#tvb.simulator.coupling.Scaling" title="Permalink to this definition">¶</a></dt>
 <dd><p>Scaling Coupling function.</p>
 <dl class="method">
 <dt id="tvb.simulator.coupling.Scaling.__init__">
@@ -176,10 +146,11 @@ default parameter set should be provided via the trait mechanism.</p>
 <dd><p>Evaluate the Linear function for the arg <tt class="docutils literal"><span class="pre">x</span></tt>. The equation being
 evaluated has the following form:</p>
 <blockquote>
-<div><div class="math">
-\begin{equation*}
-a x 
-\end{equation*}
+<div><div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" mode="display">
+<mtable>
+<mtr>
+<mtd><mi>a</mi><mi>x</mi></mtd></mtr></mtable></math>
 </div>
 </div></blockquote>
 </dd></dl>
@@ -200,13 +171,13 @@ a x
 
 <dl class="attribute">
 <dt id="tvb.simulator.coupling.HyperbolicTangent">
-<tt class="descclassname">tvb.simulator.coupling.</tt><tt class="descname">HyperbolicTangent</tt><em class="property"> None</em><a class="headerlink" href="#tvb.simulator.coupling.HyperbolicTangent" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">tvb.simulator.coupling.</tt><tt class="descname">HyperbolicTangent</tt><a class="headerlink" href="#tvb.simulator.coupling.HyperbolicTangent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Hyperbolic tangent.</p>
 <p><strong>traits on this class:</strong></p>
 <blockquote>
 <div><dl class="docutils">
-<dt><tt class="docutils literal"><span class="pre">a</span></tt> (<span class="math">\(a\)</span>
-)</dt>
+<dt><tt class="docutils literal"><span class="pre">a</span></tt> (<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>a</mi></mrow></math>)</dt>
 <dd><div class="first last line-block">
 <div class="line">Minimum of the sigmoid function</div>
 <div class="line"><tt class="docutils literal"><span class="pre">default</span></tt>:  [ 0.] </div>
@@ -226,8 +197,8 @@ a x
 <div class="line"><tt class="docutils literal"><span class="pre">default</span></tt>:  True </div>
 </div>
 </dd>
-<dt><tt class="docutils literal"><span class="pre">sigma</span></tt> (<span class="math">\(\sigma\)</span>
-)</dt>
+<dt><tt class="docutils literal"><span class="pre">sigma</span></tt> (<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>σ</mi></mrow></math>)</dt>
 <dd><div class="first last line-block">
 <div class="line">Standard deviation of the ...</div>
 <div class="line"><tt class="docutils literal"><span class="pre">default</span></tt>:  [ 1.] </div>
@@ -240,7 +211,7 @@ a x
 
 <dl class="attribute">
 <dt id="tvb.simulator.coupling.Sigmoidal">
-<tt class="descclassname">tvb.simulator.coupling.</tt><tt class="descname">Sigmoidal</tt><em class="property"> None</em><a class="headerlink" href="#tvb.simulator.coupling.Sigmoidal" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">tvb.simulator.coupling.</tt><tt class="descname">Sigmoidal</tt><a class="headerlink" href="#tvb.simulator.coupling.Sigmoidal" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sigmoidal Coupling function.</p>
 <dl class="method">
 <dt id="tvb.simulator.coupling.Sigmoidal.__init__">
@@ -254,11 +225,14 @@ a x
 <dd><p>Evaluate the Sigmoidal function for the arg <tt class="docutils literal"><span class="pre">x</span></tt>. The equation being
 evaluated has the following form:</p>
 <blockquote>
-<div><div class="math">
-\begin{equation*}
-c_{min} + (c_{max} - c_{min}) / (1.0 + \exp(-\pi/\sqrt(3.0)
-(x-midpoint)/\sigma))
-\end{equation*}
+<div><div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" mode="display">
+<mtable>
+<mtr>
+<mtd><msub><mi>c</mi>
+<mrow><mi>m</mi><mi>i</mi><mi>n</mi></mrow></msub><mo>+</mo><mo>(</mo><msub><mi>c</mi>
+<mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub><mo>-</mo><msub><mi>c</mi>
+<mrow><mi>m</mi><mi>i</mi><mi>n</mi></mrow></msub><mo>)</mo><mo>/</mo><mo>(</mo><mn>1</mn><mo>.</mo><mn>0</mn><mo>+</mo><mo>exp</mo><mo>(</mo><mo>-</mo><mi>π</mi><mo>/</mo><msqrt><mo>(</mo></msqrt><mn>3</mn><mo>.</mo><mn>0</mn><mo>)</mo><mo>(</mo><mi>x</mi><mo>-</mo><mi>m</mi><mi>i</mi><mi>d</mi><mi>p</mi><mi>o</mi><mi>i</mi><mi>n</mi><mi>t</mi><mo>)</mo><mo>/</mo><mi>σ</mi><mo>)</mo><mo>)</mo></mtd></mtr></mtable></math>
 </div>
 </div></blockquote>
 </dd></dl>
@@ -266,16 +240,18 @@ c_{min} + (c_{max} - c_{min}) / (1.0 + \exp(-\pi/\sqrt(3.0)
 <p><strong>traits on this class:</strong></p>
 <blockquote>
 <div><dl class="docutils">
-<dt><tt class="docutils literal"><span class="pre">cmax</span></tt> (<span class="math">\(c_{max}\)</span>
-)</dt>
+<dt><tt class="docutils literal"><span class="pre">cmax</span></tt> (<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>c</mi>
+<mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub></mrow></math>)</dt>
 <dd><div class="first last line-block">
 <div class="line">Maximum of the sigmoid function</div>
 <div class="line"><tt class="docutils literal"><span class="pre">default</span></tt>:  [ 1.] </div>
 <div class="line"><tt class="docutils literal"><span class="pre">range</span></tt>: low = -1000.0 ; high = 1000.0 </div>
 </div>
 </dd>
-<dt><tt class="docutils literal"><span class="pre">cmin</span></tt> (<span class="math">\(c_{min}\)</span>
-)</dt>
+<dt><tt class="docutils literal"><span class="pre">cmin</span></tt> (<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>c</mi>
+<mrow><mi>m</mi><mi>i</mi><mi>n</mi></mrow></msub></mrow></math>)</dt>
 <dd><div class="first last line-block">
 <div class="line">Minimum of the sigmoid function</div>
 <div class="line"><tt class="docutils literal"><span class="pre">default</span></tt>:  [-1.] </div>
@@ -289,8 +265,8 @@ c_{min} + (c_{max} - c_{min}) / (1.0 + \exp(-\pi/\sqrt(3.0)
 <div class="line"><tt class="docutils literal"><span class="pre">range</span></tt>: low = -1000.0 ; high = 1000.0 </div>
 </div>
 </dd>
-<dt><tt class="docutils literal"><span class="pre">sigma</span></tt> (<span class="math">\(\sigma\)</span>
-)</dt>
+<dt><tt class="docutils literal"><span class="pre">sigma</span></tt> (<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>σ</mi></mrow></math>)</dt>
 <dd><div class="first last line-block">
 <div class="line">Standard deviation of the ...</div>
 <div class="line"><tt class="docutils literal"><span class="pre">default</span></tt>:  [ 230.] </div>
@@ -303,13 +279,13 @@ c_{min} + (c_{max} - c_{min}) / (1.0 + \exp(-\pi/\sqrt(3.0)
 
 <dl class="attribute">
 <dt id="tvb.simulator.coupling.Difference">
-<tt class="descclassname">tvb.simulator.coupling.</tt><tt class="descname">Difference</tt><em class="property"> None</em><a class="headerlink" href="#tvb.simulator.coupling.Difference" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">tvb.simulator.coupling.</tt><tt class="descname">Difference</tt><a class="headerlink" href="#tvb.simulator.coupling.Difference" title="Permalink to this definition">¶</a></dt>
 <dd><p>traited class Difference
 <strong>traits on this class:</strong></p>
 <blockquote>
 <div><dl class="docutils">
-<dt><tt class="docutils literal"><span class="pre">a</span></tt> (<span class="math">\(a\)</span>
-)</dt>
+<dt><tt class="docutils literal"><span class="pre">a</span></tt> (<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>a</mi></mrow></math>)</dt>
 <dd><div class="first last line-block">
 <div class="line">Rescales the connection strength while maintaining the ratio         between different values.</div>
 <div class="line"><tt class="docutils literal"><span class="pre">default</span></tt>:  [ 0.00390625] </div>
@@ -322,13 +298,13 @@ c_{min} + (c_{max} - c_{min}) / (1.0 + \exp(-\pi/\sqrt(3.0)
 
 <dl class="attribute">
 <dt id="tvb.simulator.coupling.Kuramoto">
-<tt class="descclassname">tvb.simulator.coupling.</tt><tt class="descname">Kuramoto</tt><em class="property"> None</em><a class="headerlink" href="#tvb.simulator.coupling.Kuramoto" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">tvb.simulator.coupling.</tt><tt class="descname">Kuramoto</tt><a class="headerlink" href="#tvb.simulator.coupling.Kuramoto" title="Permalink to this definition">¶</a></dt>
 <dd><p>traited class Kuramoto
 <strong>traits on this class:</strong></p>
 <blockquote>
 <div><dl class="docutils">
-<dt><tt class="docutils literal"><span class="pre">a</span></tt> (<span class="math">\(a\)</span>
-)</dt>
+<dt><tt class="docutils literal"><span class="pre">a</span></tt> (<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>a</mi></mrow></math>)</dt>
 <dd><div class="first last line-block">
 <div class="line">Rescales the connection strength while maintaining the ratio         between different values.</div>
 <div class="line"><tt class="docutils literal"><span class="pre">default</span></tt>:  [ 0.00390625] </div>
@@ -356,25 +332,17 @@ c_{min} + (c_{max} - c_{min}) / (1.0 + \exp(-\pi/\sqrt(3.0)
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="right" >
-          <a href="tvb.simulator.models.html" title="Models"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="tvb.simulator.simulator.html" title="Simulator"
-             >previous</a> |</li>
         <li><a href="index.html">home</a>|&nbsp;</li>
         <li><a href="web_interface.html">web interface</a>|&nbsp;</li>
 	<li><a href="console_interface.html">console interface</a>|&nbsp;</li>
 	<li><a href="api.html">API</a>|&nbsp;</li>
-	<li><a href="https://github.com/the-virtual-brain">Developer (Github)</a>|&nbsp;</li>
-
-          <li><a href="tvb.html" >tvb Package</a> &raquo;</li>
-          <li><a href="tvb.simulator.html" >Welcome to tvb.simulator&#8217;s documentation!</a> &raquo;</li> 
+	<li><a href="developer.html">Developer</a>|&nbsp;</li>
+ 
       </ul>
     </div>
     <div class="footer">
         &copy; Copyright 2013, timpx.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
     </div>
   </body>
 </html>

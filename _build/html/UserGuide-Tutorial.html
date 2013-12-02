@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -13,7 +15,7 @@
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
+        URL_ROOT:    '',
         VERSION:     '2.7',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -44,7 +46,7 @@
         <li><a href="web_interface.html">web interface</a>|&nbsp;</li>
 	<li><a href="console_interface.html">console interface</a>|&nbsp;</li>
 	<li><a href="api.html">API</a>|&nbsp;</li>
-	<li><a href="https://github.com/the-virtual-brain">Developer (Github)</a>|&nbsp;</li>
+	<li><a href="developer.html">Developer</a>|&nbsp;</li>
  
       </ul>
     </div>
@@ -106,17 +108,18 @@ integration method.</p>
 </div></blockquote>
 <ol class="arabic simple">
 <li>Use the default long-range connectivity data.</li>
-<li>Apply a linear coupling function (parameters: <span class="math">\(a\)</span>
-- rescale connection
-strength=0.016, <span class="math">\(b\)</span>
-- shift=0).</li>
+<li>Apply a linear coupling function (parameters: <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>a</mi></mrow></math>- rescale connection
+strength=0.016, <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>b</mi></mrow></math>- shift=0).</li>
 <li>Leave the <em>Cortical Surface</em> and the <em>Stimulus</em> set to <strong>None</strong>.</li>
 <li>Use the default population model and its parameters.</li>
 <li>Select the Heun Stochastic integrator. Set the integration step to
-<span class="math">\(dt=0.06103515625\)</span>
- and additive noise (with null correlation time
-and standard deviation <span class="math">\(D=2^{-10}\)</span>
-, use the default
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>d</mi><mi>t</mi><mo>=</mo><mn>0</mn><mo>.</mo><mn>0</mn><mn>6</mn><mn>1</mn><mn>0</mn><mn>3</mn><mn>5</mn><mn>1</mn><mn>5</mn><mn>6</mn><mn>2</mn><mn>5</mn></mrow></math> and additive noise (with null correlation time
+and standard deviation <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>D</mi><mo>=</mo><msup><mn>2</mn>
+<mrow><mo>-</mo><mn>1</mn><mn>0</mn></mrow></msup></mrow></math>, use the default
 random number generator parameters).</li>
 <li>Use the default model initial conditions (basically random initial
 conditions).</li>
@@ -151,7 +154,7 @@ compare to some real MEG data.</p>
 </ol>
 <blockquote>
 <div><div class="figure align-center">
-<a class="reference internal image-reference" href="_images/tutorial_sanity_01.jpg"><img alt="_images/tutorial_sanity_01.jpg" src="_images/tutorial_sanity_01.jpg" style="width: 80%;" /></a>
+<img alt="_images/tutorial_sanity_01.jpg" src="_images/tutorial_sanity_01.jpg" style="width: 80%;" />
 <p class="caption">The Generic 2D Oscillator model in an oscillatory regime (limit cycle).
 Dynamics are similar to the Fitzhugh-Nagumo model.</p>
 </div>
@@ -171,13 +174,13 @@ range of condution speeds &#8211; see the <cite>Parameter Space Exploration</cit
 <div class="line"><br /></div>
 </div>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="_images/tutorial_sanity_02_cs_1000.jpg"><img alt="_images/tutorial_sanity_02_cs_1000.jpg" src="_images/tutorial_sanity_02_cs_1000.jpg" style="width: 70%;" /></a>
+<img alt="_images/tutorial_sanity_02_cs_1000.jpg" src="_images/tutorial_sanity_02_cs_1000.jpg" style="width: 70%;" />
 </div>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="_images/tutorial_sanity_02_cs_42.jpg"><img alt="_images/tutorial_sanity_02_cs_42.jpg" src="_images/tutorial_sanity_02_cs_42.jpg" style="width: 70%;" /></a>
+<img alt="_images/tutorial_sanity_02_cs_42.jpg" src="_images/tutorial_sanity_02_cs_42.jpg" style="width: 70%;" />
 </div>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="_images/tutorial_sanity_02_cs_3.jpg"><img alt="_images/tutorial_sanity_02_cs_3.jpg" src="_images/tutorial_sanity_02_cs_3.jpg" style="width: 70%;" /></a>
+<img alt="_images/tutorial_sanity_02_cs_3.jpg" src="_images/tutorial_sanity_02_cs_3.jpg" style="width: 70%;" />
 <p class="caption">Conduction speed is 1000, 42 and 3 [mm/ms] for the upper, middle and bottom
 panel respectively.</p>
 </div>
@@ -205,7 +208,7 @@ described in the <strong>Import Data</strong> section.</li>
 Structure Tree</cite>.</li>
 </ol>
 <blockquote>
-<div><a class="reference internal image-reference" href="_images/tutorial_eeg_bold_01.jpg"><img alt="_images/tutorial_eeg_bold_01.jpg" class="align-center" src="_images/tutorial_eeg_bold_01.jpg" style="width: 90%;" /></a>
+<div><img alt="_images/tutorial_eeg_bold_01.jpg" class="align-center" src="_images/tutorial_eeg_bold_01.jpg" style="width: 90%;" />
 </div></blockquote>
 <ol class="arabic simple" start="3">
 <li>Upon clicking the new list entry, the <cite>Datatype Details</cite> overlay appears.
@@ -221,7 +224,7 @@ further details on performing lesions). Select a node from the <em>Weights Matri
 enter a custom edge weight value in the overlay field and select <em>Change edge value</em>.</li>
 </ol>
 <blockquote>
-<div><a class="reference internal image-reference" href="_images/tutorial_eeg_bold_02.jpg"><img alt="_images/tutorial_eeg_bold_02.jpg" class="align-center" src="_images/tutorial_eeg_bold_02.jpg" style="width: 90%;" /></a>
+<div><img alt="_images/tutorial_eeg_bold_02.jpg" class="align-center" src="_images/tutorial_eeg_bold_02.jpg" style="width: 90%;" />
 </div></blockquote>
 <ol class="arabic simple" start="5">
 <li>You can now simulate brain activity using your own connectivity data. Switch
@@ -258,7 +261,7 @@ will be listed under the node <em>Intermediate Data</em>).</li>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>Please check that simulation length is larger than the BOLD sampling period!!</p>
-<a class="last reference internal image-reference" href="_images/tutorial_eeg_bold_04.jpg"><img alt="_images/tutorial_eeg_bold_04.jpg" class="align-center" src="_images/tutorial_eeg_bold_04.jpg" style="width: 90%;" /></a>
+<img alt="_images/tutorial_eeg_bold_04.jpg" class="last align-center" src="_images/tutorial_eeg_bold_04.jpg" style="width: 90%;" />
 </div>
 </div>
 <div class="section" id="id2">
@@ -350,7 +353,7 @@ induced both significant increases and decreases of correlations between
 intact nodes, even for pairs of nodes in different hemispheres.</p>
 <blockquote>
 <div><div class="figure align-center">
-<a class="reference internal image-reference" href="_images/tutorial_lesion_results.jpg"><img alt="_images/tutorial_lesion_results.jpg" src="_images/tutorial_lesion_results.jpg" style="width: 40%;" /></a>
+<img alt="_images/tutorial_lesion_results.jpg" src="_images/tutorial_lesion_results.jpg" style="width: 40%;" />
 </div>
 <p>A) Top: Intact connectivity matrix. Middle: Connectivity matrix with
 lesions. Bottom: Difference between intact and injured connectivity
@@ -388,16 +391,17 @@ within <a href="#id15"><span class="problematic" id="id16">|TVB|</span></a>.</p>
 <li>Click on the &#8216;V&#8217; button next to the model parameters to unfold the available
 parameter range and step size. At present, a maximum of 2
 parameters can be explored at the same time.</li>
-<li>For <span class="math">\(I_{ext}\)</span>
- set the step size to 0.4 and for <span class="math">\(a\)</span>
- 0.5</li>
+<li>For <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>I</mi>
+<mrow><mi>e</mi><mi>x</mi><mi>t</mi></mrow></msub></mrow></math> set the step size to 0.4 and for <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>a</mi></mrow></math> 0.5</li>
 <li>Name the new simulation and launch it.</li>
 <li>After all simulation are finished, you should be able to see the Parameter
 Space Exploration Visualizer.</li>
 </ul>
 </div></blockquote>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="_images/simulator_pse_configuration.jpg"><img alt="_images/simulator_pse_configuration.jpg" src="_images/simulator_pse_configuration.jpg" style="width: 60%;" /></a>
+<img alt="_images/simulator_pse_configuration.jpg" src="_images/simulator_pse_configuration.jpg" style="width: 60%;" />
 </div>
 <p>Each point in this two dimensional graph represents two metrics: by default
 Global Variance corresponds to the size of the point and Variance of the
@@ -544,7 +548,7 @@ the animation on the cortical surface.</p>
 <div class="line"><br /></div>
 </div>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="_images/stimulus_surface_play.jpg"><img alt="_images/stimulus_surface_play.jpg" src="_images/stimulus_surface_play.jpg" style="width: 90%;" /></a>
+<img alt="_images/stimulus_surface_play.jpg" src="_images/stimulus_surface_play.jpg" style="width: 90%;" />
 </div>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
@@ -572,13 +576,13 @@ the animation on the cortical surface.</p>
         <li><a href="web_interface.html">web interface</a>|&nbsp;</li>
 	<li><a href="console_interface.html">console interface</a>|&nbsp;</li>
 	<li><a href="api.html">API</a>|&nbsp;</li>
-	<li><a href="https://github.com/the-virtual-brain">Developer (Github)</a>|&nbsp;</li>
+	<li><a href="developer.html">Developer</a>|&nbsp;</li>
  
       </ul>
     </div>
     <div class="footer">
         &copy; Copyright 2013, timpx.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
     </div>
   </body>
 </html>
