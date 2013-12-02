@@ -5,16 +5,16 @@
         <li><a href="{{ pathto('index') }}">home</a>|&nbsp;</li>
         <li><a href="{{ pathto('web_interface') }}">web interface</a>|&nbsp;</li>
 	<li><a href="{{ pathto('console_interface') }}">console interface</a>|&nbsp;</li>
-	<li><a href="{{ pathto('api/index') }}">API</a>|&nbsp;</li>
+	<li><a href="{{ pathto('api') }}">API</a>|&nbsp;</li>
 	<li><a href="https://github.com/the-virtual-brain">Developer (Github)</a>|&nbsp;</li>
 {% endblock %}
 
 
 {% block relbar1 %}
 
-<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
-<a href="{{ pathto('index') }}"><img src="{{
-pathto("_static/logo.svg", 1) }}" border="0" alt="py4sci"/></a>
+<div style="background-color: white; text-align: left;  padding: 10px 10px 15px 15px">
+<a href="http://www.thevirtualbrain.org/"><img src="{{
+pathto("_static/logo.svg", 1) }}" height="148" border="0" alt="The Virtual Brain Project"/></a>
 </div>
 {{ super() }}
 {% endblock %}

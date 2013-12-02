@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.10: http://docutils.sourceforge.net/" />
+<title>Analyze</title>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<link rel="stylesheet" href="styles/html4css1.css" type="text/css" />
+<link rel="stylesheet" href="styles/html_doc.css" type="text/css" />
+</head>
+<body>
+<div class="document" id="analyze">
+<h1 class="title">Analyze</h1>
+
+<p>This area offers a set of techniques for data analysis.</p>
+<div class="figure align-center">
+<img alt="screenshots/analyze.jpg" src="screenshots/analyze.jpg" style="width: 80%;" />
+<p class="caption">Current available analyzers</p>
+</div>
+<p>The <cite>Analysis</cite> area has several interfaces that support the following operations
+for time-series analysis:</p>
+<blockquote>
+<ul class="simple">
+<li>Cross-correlation of nodes</li>
+<li>Fourier Spectral Analysis</li>
+<li>Global TimeSeries Metrics</li>
+<li>Cross coherence of nodes</li>
+<li>Temporal covariance of nodes</li>
+<li>Principal Component Analysis</li>
+<li>Independent Component Analysis</li>
+<li>Continuous Wavelet Transform</li>
+</ul>
+</blockquote>
+<div class="section" id="cross-correlation-of-nodes">
+<h1>Cross-correlation of nodes</h1>
+<p>Compute pairwise temporal cross-correlation of all nodes in a 4D TimeSeries
+object. Cross-correlation, or normalized cross-covariance, is a measure that
+quantifies the degree of linear dependence between two time-series.</p>
+<p>To calculate the correlation coefficient of all nodes of a given multi-node
+time-series, simply select the TimeSeries object from the drop-down list in the
+<cite>Cross-correlation of nodes</cite> interface and hit <cite>Launch</cite>.</p>
+<p>The algorithm returns a CrossCorrelation object that contains cross correlation
+coefficients for all possible combinations of nodes.
+Results are visualized with the <cite>Correlation viewer</cite>.</p>
+</div>
+<div class="section" id="pearson-correlation-coefficient">
+<h1>Pearson Correlation Coefficient</h1>
+<p>To calculate the Pearson correlation coefficient of all nodes of a given multi-node
+time-series, simply select the TimeSeries object from the drop-down list in the
+<cite>Pearson Correlation Coefficient</cite> analyzer interface and hit <cite>Launch</cite>.</p>
+<p>The algorithm returns a CorrelationCoefficient object that contains cross correlation
+coefficients for all possible combinations of nodes.
+Results are visualized with the <cite>Pearson Correlation Coefficient viewer</cite>.</p>
+</div>
+<div class="section" id="fourier-spectral-analysis">
+<h1>Fourier Spectral Analysis</h1>
+<p>Compute a fast Fourier transform (FFT) of a TimeSeries object. FFT is an
+algorithm to compute the discrete Fourier transform (DFT) and its inverse for a 1
+given sequence of values. DFT transforms a function into its frequency-domain
+representation, that is, a sum of weighted sinusoids while preserving all of the
+information about the original signal. After decomposing the signal, spectrum
+analysis quantifies the relative amounts of amplitudes, powers, intensities or
+phases of a component versus its frequency.</p>
+<p>In order to perform a Fourier analysis of your time-series data follow these steps:</p>
+<blockquote>
+<ul class="simple">
+<li>Go to the <cite>Fourier Spectral Analysis</cite> interface and select a <cite>Windowing function</cite>, you can choose among ‘hamming’, ‘bartlett’, ‘blackman’ and ‘hanning’.</li>
+<li>Select the time-series.</li>
+<li>Select a segment length.</li>
+<li>Hit <cite>Launch</cite>.</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="timeseries-metrics">
+<h1>TimeSeries Metrics</h1>
+<p>Calculate one scalar metric to characterize the time-series dataset.</p>
+</div>
+<div class="section" id="cross-coherence-of-nodes">
+<h1>Cross coherence of nodes</h1>
+<p>Calculate pairwise temporal coherence of all nodes in a 4D TimeSeries object.
+Coherence analysis, or cross-spectral analysis, can be used to estimate how two
+time series are related in the spectral domain. Cross-coherence indicates the
+degree to which amplitude and phase between two signals relate to each other as
+a function of frequency.</p>
+<p>To calculate the cross-coherence of all nodes of a given multi-node time-series,
+simply select the TimeSeries object from the drop-down list in the <cite>Cross coherence of nodes</cite>
+interface, select an appropriate measure for data-point per block, and hit <cite>Launch</cite>.</p>
+<!-- The algorithm returns a CoherenceSpectrum object that is a xD-Matrix with the Dimensions {x,x,x…}. -->
+<p>The resulting coherence spectrum can be viewed with the <cite>Cross coherence visualizer</cite>.</p>
+<img alt="screenshots/visualizer_cross_coherence.jpg" class="align-center" src="screenshots/visualizer_cross_coherence.jpg" style="width: 90%;" />
+</div>
+<div class="section" id="complex-coherence-of-nodes">
+<h1>Complex coherence of nodes</h1>
+<p>To calculate the complex-cross-coherence of all nodes of a given multi-node time-series,
+simply select the TimeSeries object from the drop-down list in the <cite>Complex coherence of nodes</cite>
+interface and hit <cite>Launch</cite>.</p>
+<p>The resulting coherence spectrum can be viewed with the <cite>Complex coherence visualizer</cite>.</p>
+<img alt="screenshots/visualizer_complex_coherence.jpg" class="align-center" src="screenshots/visualizer_complex_coherence.jpg" style="width: 90%;" />
+</div>
+<div class="section" id="temporal-covariance-of-nodes">
+<h1>Temporal covariance of nodes</h1>
+<p>Compute pairwise temporal covariance of all nodes in a 4D TimeSeries object.
+Covariance resembles the un-normalized correlation coefficient and measures how
+much two time-series change together.</p>
+<p>To calculate the temporal covariance of all nodes of a given multi-node time-series,
+select the TimeSeries object from the drop-down list in the <cite>Independent Component Analysis</cite>
+interface and hit <cite>Launch</cite>.</p>
+<p>The algorithm returns a Covariance object that is a 4D-Matrix with the Dimensions
+{nodes, nodes, 1, 1}. The resulting covariance matrix can be viewed with the <cite>Covariance visualizer</cite>.</p>
+<img alt="screenshots/visualizer_covariance.jpg" class="align-center" src="screenshots/visualizer_covariance.jpg" style="width: 90%;" />
+</div>
+<div class="section" id="principal-component-analysis-pca">
+<h1>Principal Component Analysis (PCA)</h1>
+<p>Compute a PCA of a 4D TimeSeries object. PCA is a computational method for
+multivariate data analysis that uses an orthogonal transformation to convert a
+set of (possibly correlated) variables into a set of linearly uncorrelated
+variables called principal components.</p>
+<p>To calculate a PCA of all nodes of a given multi-node time-series, select the
+4D-TimeSeries object from the drop-down list in the <cite>Principal Components Analysis</cite>
+interface and hit <cite>Launch</cite>.</p>
+<p>The algorithm returns an PrincipalComponents object that is a xD-Matrix with the
+Dimensions {x,y,z}. The resulting time-series can be viewed with the <cite>Pca viewer</cite>.</p>
+<img alt="screenshots/analyzers_pca.jpg" class="align-center" src="screenshots/analyzers_pca.jpg" style="width: 90%;" />
+</div>
+<div class="section" id="independent-component-analysis-ica">
+<h1>Independent Component Analysis (ICA)</h1>
+<p>Compute a time-domain ICA decomposition of a 4D TimeSeries object. ICA is a
+statistical and computational method for separating a multivariate signal into
+additive subcomponents by maximizing the mutual statistical independence of
+source signals.</p>
+<p>To calculate a temporal ICA of all nodes of a given multi-node time-series,
+select the 4D-TimeSeries object from the drop-down list in the <cite>Independent Component Analysis</cite>
+interface and hit <cite>Launch</cite>.</p>
+<p>The algorithm returns an IndependentComponents object that is a xD-Matrix with the
+Dimensions {x,y,z}. The resulting time-series can be viewed with the the corresponding ICA viewer.</p>
+</div>
+<div class="section" id="continuous-wavelet-transform-cwt">
+<h1>Continuous Wavelet Transform (CWT)</h1>
+<p>Compute a CWT of a 4D TimeSeries object. CWT decomposes a signal into wavelets
+of different frequencies yielding a time-frequency representation of the signal.</p>
+<p>To calculate a CWT of all nodes of a given multi-node time-series, select the
+4D-TimeSeries object from the drop-down list in the <cite>Continuous Wavelet Transform</cite>
+interface, specify transformation parameters like:</p>
+<blockquote>
+<ul class="simple">
+<li>mother wavelet function</li>
+<li>frequency resolution and range</li>
+<li>type of the normalization for the resulting wavelet spectrum</li>
+<li>Q-ratio</li>
+<li>Sampling period of the spectrum</li>
+</ul>
+</blockquote>
+<p>and hit <cite>Launch</cite>.</p>
+<p>The algorithm returns an <cite>WaveletCoefficients</cite> object that is a xD-Matrix with the Dimensions {x,y,z}.
+The resulting spectrogram of wavelet power can be viewed with the <cite>Wavelet viewer</cite>.</p>
+<img alt="screenshots/visualizer_wavelet.jpg" class="align-center" src="screenshots/visualizer_wavelet.jpg" style="width: 90%;" />
+</div>
+<div class="section" id="brain-connectivity-toolbox-analyzers">
+<h1>Brain Connectivity Toolbox Analyzers</h1>
+<p>If you have <cite>matlab</cite> or <cite>octave</cite> installed and available through the command
+line then all the algorithms offered by <cite>Brain Connectivity Toolbox</cite> (BCT)
+can be used directly from <em>TheVirtualBrain</em> interface and the results can later be displayed
+in one of our visualizers.</p>
+<p>Additional BCT techniques are:</p>
+<blockquote>
+<ul class="simple">
+<li>Degree and Similarity Algorithms</li>
+<li>Centrality Algorithms</li>
+<li>Distance Algorithms</li>
+<li>Modularity Algorithms</li>
+<li>Clustering Algorithms</li>
+<li>Density Algorithms</li>
+</ul>
+</blockquote>
+<p>For more details, please refer to <a class="reference external" href="https://sites.google.com/site/bctnet/">BCT</a> web site</p>
+</div>
+<div class="section" id="tvb-analyzers">
+<h1>TVB Analyzers</h1>
+<div class="section" id="variance-of-node-variance">
+<h2>Variance of Node Variance</h2>
+<blockquote>
+<p>Zero-centres all the time-series, calculates the variance for each node
+time-series and returns the variance of the node variances.</p>
+<p>Input:
+TimeSeries datatype</p>
+<p>Output:
+Float</p>
+<p>This is a crude indicator of how different the &quot;excitability&quot; of the model is
+from node to node.</p>
+<p><strong>traits on this class:</strong></p>
+<blockquote>
+<dl class="docutils">
+<dt><tt class="docutils literal">time_series</tt> (Time Series)</dt>
+<dd><div class="first last line-block">
+<div class="line">The TimeSeries for which the variance of the zero centered node             variance is to be computed.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  None</div>
+</div>
+</dd>
+</dl>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="node-coherence">
+<h2>Node Coherence</h2>
+<blockquote>
+<p><strong>traits on this class:</strong></p>
+<blockquote>
+<dl class="docutils">
+<dt><tt class="docutils literal">nfft</tt> (Data-points per block)</dt>
+<dd><div class="first last line-block">
+<div class="line">Should be a power of 2...</div>
+<div class="line"><tt class="docutils literal">default</tt>:  256</div>
+</div>
+</dd>
+<dt><tt class="docutils literal">time_series</tt> (Time Series)</dt>
+<dd><div class="first last line-block">
+<div class="line">The timeseries to which the FFT is to be applied.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  None</div>
+</div>
+</dd>
+</dl>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="node-covariance">
+<h2>Node Covariance</h2>
+<blockquote>
+<p>Compute the temporal covariance of nodes in a TimeSeries dataType.
+A nodes x nodes matrix is returned for each (state-variable, mode).</p>
+<p><strong>traits on this class:</strong></p>
+<blockquote>
+<dl class="docutils">
+<dt><tt class="docutils literal">time_series</tt> (Time Series)</dt>
+<dd><div class="first last line-block">
+<div class="line">The timeseries to which the NodeCovariance is to be applied.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  None</div>
+</div>
+</dd>
+</dl>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="principal-components-analysis">
+<h2>Principal Components Analysis</h2>
+<blockquote>
+<p>Return principal component weights and the fraction of the variance that
+they explain.</p>
+<p>PCA takes time-points as observations and nodes as variables.</p>
+<dl class="docutils">
+<dt>NOTE: The TimeSeries must be longer(more time-points) than the number of</dt>
+<dd>nodes -- Mostly a problem for TimeSeriesSurface datatypes, which, if
+sampled at 1024Hz, would need to be greater than 16 seconds long.</dd>
+</dl>
+<p><strong>traits on this class:</strong></p>
+<blockquote>
+<dl class="docutils">
+<dt><tt class="docutils literal">time_series</tt> (Time Series)</dt>
+<dd><div class="first last line-block">
+<div class="line">The timeseries to which the PCA is to be applied. NOTE: The              TimeSeries must be longer(more time-points) than the number of nodes             -- Mostly a problem for surface times-series, which, if sampled at             1024Hz, would need to be greater than 16 seconds long.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  None</div>
+</div>
+</dd>
+</dl>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="independent-component-analysis">
+<h2>Independent Component Analysis</h2>
+<blockquote>
+<p>Takes a TimeSeries datatype (x) and returns the unmixed temporal sources (S)
+and the estimated mixing matrix (A).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">math:</th><td class="field-body">x = AS</td>
+</tr>
+</tbody>
+</table>
+<p>ICA takes time-points as observations and nodes as variables.</p>
+<p>It uses the fastICA algorithm implemented in the scikit-learn toolkit, and
+its intended usage is as a <cite>blind source separation</cite> method.</p>
+<p>See also: <a class="reference external" href="http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.fastica.html#sklearn.decomposition.fastica">http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.fastica.html#sklearn.decomposition.fastica</a></p>
+<p>Before the fastICA algorithm can be applied, the input vector data
+should be whitened (<cite>sphering</cite>). This means that any correlations in the
+data are removed, i.e. the signals are forced to be uncorrelated. To this end,
+the <cite>whiten</cite> parameter is always set to <cite>True</cite>.</p>
+<dl class="docutils">
+<dt>NOTE: As for PCA the TimeSeries datatype must be longer (more time-points)</dt>
+<dd>than the number of nodes -- Mostly a problem for TimeSeriesSurface
+datatypes, which, if sampled at 1024Hz, would need to be greater than
+16 seconds long.</dd>
+</dl>
+<p><strong>traits on this class:</strong></p>
+<blockquote>
+<dl class="docutils">
+<dt><tt class="docutils literal">n_components</tt> (Number of components to extract)</dt>
+<dd><div class="first last line-block">
+<div class="line">Number of components to extract and to perform dimension reduction.             The number of components must be less than the number of variables.             By default it takes number of components = number of nodes. Definitely             a problem for surface time-series.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  None</div>
+</div>
+</dd>
+<dt><tt class="docutils literal">time_series</tt> (Time Series)</dt>
+<dd><div class="first last line-block">
+<div class="line">The timeseries to which the ICA is to be applied. NOTE: The              TimeSeries must be longer(more time-points) than the number of nodes             -- Mostly a problem for surface times-series, which, if sampled at             1024Hz, would need to be greater than 16 seconds long.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  None</div>
+</div>
+</dd>
+</dl>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="cross-correlation">
+<h2>Cross-correlation</h2>
+<blockquote>
+<p>Compute the node-pairwise cross-correlation of the given input 4D TimeSeries
+datatype.</p>
+<p>Return a CrossCorrelation datatype. It contains the cross-correlation
+sequences for all possible combinations of the nodes.</p>
+<p>See: <a class="reference external" href="http://www.scipy.org/doc/api_docs/SciPy.signal.signaltools.html#correlate">http://www.scipy.org/doc/api_docs/SciPy.signal.signaltools.html#correlate</a></p>
+<p><strong>traits on this class:</strong></p>
+<blockquote>
+<dl class="docutils">
+<dt><tt class="docutils literal">time_series</tt> (Time Series)</dt>
+<dd><div class="first last line-block">
+<div class="line">The time-series for which the cross correlation sequences are          calculated.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  None</div>
+</div>
+</dd>
+</dl>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="global-variance">
+<h2>Global Variance</h2>
+<blockquote>
+<p>Zero-centres all the time-series and then calculates the variance over all
+data points.</p>
+<p>Input:
+TimeSeries datatype</p>
+<p>Output:
+Float</p>
+<p>This is a crude indicator of &quot;excitability&quot; or oscillation amplitude of the
+models over the entire network.</p>
+<p><strong>traits on this class:</strong></p>
+<blockquote>
+<dl class="docutils">
+<dt><tt class="docutils literal">time_series</tt> (Time Series)</dt>
+<dd><div class="first last line-block">
+<div class="line">The TimeSeries for which the zero centered Global Variance is to             be computed.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  None</div>
+</div>
+</dd>
+</dl>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="node-complex-coherence">
+<h2>Node Complex Coherence</h2>
+<blockquote>
+<p>A class for calculating the FFT of a TimeSeries and returning
+a ComplexCoherenceSpectrum datatype.</p>
+<dl class="docutils">
+<dt>This algorithm is based on the matlab function data2cs_event.m written by Guido Nolte:</dt>
+<dd><table class="first last docutils citation" frame="void" id="freyer-2012" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Freyer_2012]</td><td>Freyer, F.; Reinacher, M.; Nolte, G.; Dinse, H. R. and
+Ritter, P. * Repetitive tactile stimulation changes resting-state
+functional connectivity-implications for treatment of sensorimotor decline.*
+Front Hum Neurosci, Bernstein Focus State Dependencies of Learning and
+Bernstein Center for Computational Neuroscience Berlin, Germany., 2012, 6, 144</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Input:
+originally the input could be 2D (tpts x nodes/channels), and it was possible
+to give a 3D array (e.g., tpspt x nodes/cahnnels x trials) via the segment_length
+attribute.
+Current TVB implementation can handle 4D or 2D TimeSeries datatypes.
+Be warned: the 4D TimeSeries will be averaged and squeezed.</p>
+<p>Output: (main arrays)
+- the cross-spectrum
+- the complex coherence, from which the imaginary part can be extracted</p>
+<p>By default the time series is segmented into 1 second <cite>epoch</cite> blocks and 0.5
+second 50% overlapping <cite>segments</cite> to which a Hanning function is applied.</p>
+<p><strong>traits on this class:</strong></p>
+<blockquote>
+<dl class="docutils">
+<dt><tt class="docutils literal">average_segments</tt> (Average across segments)</dt>
+<dd><div class="first last line-block">
+<div class="line">Flag. If <cite>True</cite>, compute the mean Cross Spectrum across                  segments.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  True</div>
+</div>
+</dd>
+<dt><tt class="docutils literal">detrend_ts</tt> (Detrend time series)</dt>
+<dd><div class="first last line-block">
+<div class="line">Flag. If <cite>True</cite> removes linear trend along the time dimension                  before applying FFT.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  False</div>
+</div>
+</dd>
+<dt><tt class="docutils literal">epoch_length</tt> (Epoch length [ms])</dt>
+<dd><div class="first last line-block">
+<div class="line">In general for lengthy EEG recordings (~30 min), the timeseries          are divided into equally sized segments (~ 20-40s). These contain the          event that is to be characterized by means of the cross coherence.          Additionally each epoch block will be further divided into segments to          which the FFT will be applied.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  1000.0</div>
+</div>
+</dd>
+<dt><tt class="docutils literal">max_freq</tt> (Maximum frequency)</dt>
+<dd><div class="first last line-block">
+<div class="line">Maximum frequency points (e.g. 32., 64., 128.) represented in                  the output. Default is segment_length / 2 + 1.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  1024.0</div>
+</div>
+</dd>
+<dt><tt class="docutils literal">npat</tt> (dummy variable)</dt>
+<dd><div class="first last line-block">
+<div class="line">This attribute appears to be related to an input projection              matrix... Which is not yet implemented</div>
+<div class="line"><tt class="docutils literal">default</tt>:  1.0</div>
+</div>
+</dd>
+<dt><tt class="docutils literal">segment_length</tt> (Segment length [ms])</dt>
+<dd><div class="first last line-block">
+<div class="line">The timeseries can be segmented into equally sized blocks             (overlapping if necessary). The segement length determines the             frequency resolution of the resulting power spectra -- longer             windows produce finer frequency resolution.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  500.0</div>
+</div>
+</dd>
+<dt><tt class="docutils literal">segment_shift</tt> (Segment shift [ms])</dt>
+<dd><div class="first last line-block">
+<div class="line">Time length by which neighboring segments are shifted. e.g.                 <cite>segment shift</cite> = <cite>segment_length</cite> / 2 means 50% overlapping                  segments.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  250.0</div>
+</div>
+</dd>
+<dt><tt class="docutils literal">subtract_epoch_average</tt> (Subtract average across epochs)</dt>
+<dd><div class="first last line-block">
+<div class="line">Flag. If <cite>True</cite> and if the number of epochs is &gt; 1, you can                  optionally subtract the mean across epochs before computing the                  complex coherence.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  True</div>
+</div>
+</dd>
+<dt><tt class="docutils literal">time_series</tt> (Time Series)</dt>
+<dd><div class="first last line-block">
+<div class="line">The timeseries for which the CrossCoherence and ComplexCoherence         is to be computed.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  None</div>
+</div>
+</dd>
+<dt><tt class="docutils literal">window_function</tt> (Windowing function)</dt>
+<dd><div class="first last line-block">
+<div class="line">Windowing functions can be applied before the FFT is performed.              Default is <cite>hanning</cite>, possibilities are: 'hamming'; 'bartlett';             'blackman'; and 'hanning'. See, numpy.&lt;function_name&gt;.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  hanning</div>
+</div>
+</dd>
+<dt><tt class="docutils literal">zeropad</tt> (Zeropadding)</dt>
+<dd><div class="first last line-block">
+<div class="line">Adds <cite>n</cite> zeros at the end of each segment and at the end          of window_function. It is not yet functional.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  0</div>
+</div>
+</dd>
+</dl>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="wavelet">
+<h2>Wavelet</h2>
+<blockquote>
+<p>A class for calculating the wavelet transform of a TimeSeries object of TVB
+and returning a WaveletSpectrum object. The sampling period and frequency
+range of the result can be specified. The mother wavelet can also be
+specified... (So far, only Morlet.)</p>
+<dl class="docutils">
+<dt>References:</dt>
+<dd><table class="first docutils citation" frame="void" id="tbetal-1996" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[TBetal_1996]</td><td>C. Tallon-Baudry et al, <em>Stimulus Specificity of
+Phase-Locked and Non-Phase-Locked 40 Hz Visual Responses in Human.</em>,
+J Neurosci 16(13):4240-4249, 1996.</td></tr>
+</tbody>
+</table>
+<table class="last docutils citation" frame="void" id="mallat-1999" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Mallat_1999]</td><td>S. Mallat, <em>A wavelet tour of signal processing.</em>,
+book, Academic Press, 1999.</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p><strong>traits on this class:</strong></p>
+<blockquote>
+<dl class="docutils">
+<dt><tt class="docutils literal">frequencies</tt> (Frequency range of result (kHz).)</dt>
+<dd><div class="first last line-block">
+<div class="line">The frequency resolution and range returned. Requested             frequencies are converted internally into appropriate scales.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  Range(bound=False, value=None)</div>
+</div>
+</dd>
+<dt><tt class="docutils literal">mother</tt> (Wavelet function)</dt>
+<dd><div class="first last line-block">
+<div class="line">The mother wavelet function used in the transform. Default is             'morlet', possibilities are: 'morlet'...</div>
+<div class="line"><tt class="docutils literal">default</tt>:  morlet</div>
+</div>
+</dd>
+<dt><tt class="docutils literal">normalisation</tt> (Normalisation)</dt>
+<dd><div class="first last line-block">
+<div class="line">The type of normalisation for the resulting wavet spectrum.             Default is 'energy', options are: 'energy'; 'gabor'.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  energy</div>
+</div>
+</dd>
+<dt><tt class="docutils literal">q_ratio</tt> (Q-ratio)</dt>
+<dd><div class="first last line-block">
+<div class="line">NFC. Must be greater than 5.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  5.0</div>
+</div>
+</dd>
+<dt><tt class="docutils literal">sample_period</tt> (Sample period of result (ms))</dt>
+<dd><div class="first last line-block">
+<div class="line">The sampling period of the computed wavelet spectrum. NOTE:             This should be an integral multiple of the of the sampling period              of the source time series, otherwise the actual resulting sample             period will be the first correct value below that requested.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  7.8125</div>
+</div>
+</dd>
+<dt><tt class="docutils literal">time_series</tt> (Time Series)</dt>
+<dd><div class="first last line-block">
+<div class="line">The timeseries to which the wavelet is to be applied.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  None</div>
+</div>
+</dd>
+</dl>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="fast-fourier-transform-fft">
+<h2>Fast Fourier Transform (FFT)</h2>
+<blockquote>
+<p>A class for calculating the FFT of a TimeSeries object of TVB and returning
+a FourierSpectrum object. A segment length and windowing function can be
+optionally specified. By default the time series is segmented into 1 second
+blocks and no windowing function is applied.</p>
+<p><strong>traits on this class:</strong></p>
+<blockquote>
+<dl class="docutils">
+<dt><tt class="docutils literal">segment_length</tt> (Segment(window) length (ms))</dt>
+<dd><div class="first last line-block">
+<div class="line">The timeseries can be segmented into equally sized blocks             (overlapping if necessary). The segement length determines the             frequency resolution of the resulting power spectra -- longer             windows produce finer frequency resolution.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  1000.0</div>
+</div>
+</dd>
+<dt><tt class="docutils literal">time_series</tt> (Time Series)</dt>
+<dd><div class="first last line-block">
+<div class="line">The timeseries to which the FFT is to be applied.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  None</div>
+</div>
+</dd>
+<dt><tt class="docutils literal">window_function</tt> (Windowing function)</dt>
+<dd><div class="first last line-block">
+<div class="line">Windowing functions can be applied before the FFT is performed.              Default is None, possibilities are: 'hamming'; 'bartlett';             'blackman'; and 'hanning'. See, numpy.&lt;function_name&gt;.</div>
+<div class="line"><tt class="docutils literal">default</tt>:  None</div>
+</div>
+</dd>
+</dl>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="kuramoto-index">
+<h2>Kuramoto Index</h2>
+<blockquote>
+<p>Return the Kuramoto synchronization index.</p>
+<p>Useful metric for a parameter analysis when the collective brain dynamics
+represent coupled oscillatory processes.</p>
+<p>The <em>order</em> parameters are <span class="math">\(r\)</span>
+ and <span class="math">\(Psi\)</span>
+.</p>
+<div class="math">
+\begin{equation*}
+r e^{i * \psi} = \frac{1}{N}\,\sum_{k=1}^N(e^{i*\theta_k})
+\end{equation*}
+</div>
+<p>The first is the phase coherence of the population of oscillators (KSI)
+and the second is the average phase.</p>
+<p>When <span class="math">\(r=0\)</span>
+ means 0 coherence among oscillators.</p>
+<p>Input:
+TimeSeries datatype</p>
+<p>Output:
+Float</p>
+<p>This is a crude indicator of synchronization among nodes over the entire
+network.</p>
+<p>#NOTE: For the time being it is meant to be another global metric.
+However, it should be consider to have a sort of TimeSeriesDatatype for this
+analyzer.</p>
+<p><strong>traits on this class:</strong></p>
+<blockquote>
+<dl class="docutils">
+<dt><tt class="docutils literal">time_series</tt> (Time Series)</dt>
+<dd><div class="first last line-block">
+<div class="line">The TimeSeries for which the Kuramoto Synchronization Index         will be computed</div>
+<div class="line"><tt class="docutils literal">default</tt>:  None</div>
+</div>
+</dd>
+</dl>
+</blockquote>
+</blockquote>
+</div>
+</div>
+</div>
+</body>
+</html>

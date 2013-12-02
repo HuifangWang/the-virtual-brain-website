@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>tvb.simulator.demos package &mdash; tvb_doc 2.7 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="tvb_doc 2.7 documentation" href="index.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/logo.svg" border="0" alt="py4sci"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="index.html">home</a>|&nbsp;</li>
+        <li><a href="web_interface.html">web interface</a>|&nbsp;</li>
+	<li><a href="console_interface.html">console interface</a>|&nbsp;</li>
+	<li><a href="api.html">API</a>|&nbsp;</li>
+	<li><a href="https://github.com/the-virtual-brain">Developer (Github)</a>|&nbsp;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">tvb.simulator.demos package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-connectivity-normalisation-modes-module">tvb.simulator.demos.connectivity_normalisation_modes module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-corrcoeff-analyse-view-region-module">tvb.simulator.demos.corrcoeff_analyse_view_region module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-debug-device-module">tvb.simulator.demos.debug_device module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-display-region-connectivity-module">tvb.simulator.demos.display_region_connectivity module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-display-sensors-locations-module">tvb.simulator.demos.display_sensors_locations module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-display-subject-dataset-module">tvb.simulator.demos.display_subject_dataset module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-display-surface-local-connectivity-module">tvb.simulator.demos.display_surface_local_connectivity module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-display-surface-parcellation-module">tvb.simulator.demos.display_surface_parcellation module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-generate-region-demo-data-module">tvb.simulator.demos.generate_region_demo_data module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-generate-surface-demo-data-module">tvb.simulator.demos.generate_surface_demo_data module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-gpu-parsweep-module">tvb.simulator.demos.gpu_parsweep module</a></li>
+<li><a class="reference internal" href="#module-tvb.simulator.demos.mse_analyse_region">tvb.simulator.demos.mse_analyse_region module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-normalizing-model-dynamics-module">tvb.simulator.demos.normalizing_model_dynamics module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-pca-analyse-view-region-module">tvb.simulator.demos.pca_analyse_view_region module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-pca-analyse-view-surface-module">tvb.simulator.demos.pca_analyse_view_surface module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-region-deterministic-module">tvb.simulator.demos.region_deterministic module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-region-deterministic-smooth-parameter-variation-module">tvb.simulator.demos.region_deterministic_smooth_parameter_variation module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-region-deterministic-stimulus-module">tvb.simulator.demos.region_deterministic_stimulus module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-region-deterministic-stimulus-long-bold-module">tvb.simulator.demos.region_deterministic_stimulus_long_bold module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-region-stochastic-module">tvb.simulator.demos.region_stochastic module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-region-stochastic-jansen-module">tvb.simulator.demos.region_stochastic_jansen module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-region-stochastic-reducedwongwang-module">tvb.simulator.demos.region_stochastic_reducedwongwang module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-region-stochastic-simulation-continuation-bold-module">tvb.simulator.demos.region_stochastic_simulation_continuation_bold module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-seeg-region-deterministic-module">tvb.simulator.demos.seeg_region_deterministic module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-seeg-surface-deterministic-module">tvb.simulator.demos.seeg_surface_deterministic module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-surface-deterministic-module">tvb.simulator.demos.surface_deterministic module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-surface-deterministic-custom-local-connectivity-module">tvb.simulator.demos.surface_deterministic_custom_local_connectivity module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-surface-deterministic-stimulus-module">tvb.simulator.demos.surface_deterministic_stimulus module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-surface-deterministic-surface-stimulus-module">tvb.simulator.demos.surface_deterministic_surface_stimulus module</a></li>
+<li><a class="reference internal" href="#tvb-simulator-demos-surface-stochastic-module">tvb.simulator.demos.surface_stochastic module</a></li>
+<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/tvb.simulator.demos.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="tvb-simulator-demos-package">
+<h1>tvb.simulator.demos package<a class="headerlink" href="#tvb-simulator-demos-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-connectivity-normalisation-modes-module">
+<h2>tvb.simulator.demos.connectivity_normalisation_modes module<a class="headerlink" href="#tvb-simulator-demos-connectivity-normalisation-modes-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-corrcoeff-analyse-view-region-module">
+<h2>tvb.simulator.demos.corrcoeff_analyse_view_region module<a class="headerlink" href="#tvb-simulator-demos-corrcoeff-analyse-view-region-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-debug-device-module">
+<h2>tvb.simulator.demos.debug_device module<a class="headerlink" href="#tvb-simulator-demos-debug-device-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-display-region-connectivity-module">
+<h2>tvb.simulator.demos.display_region_connectivity module<a class="headerlink" href="#tvb-simulator-demos-display-region-connectivity-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-display-sensors-locations-module">
+<h2>tvb.simulator.demos.display_sensors_locations module<a class="headerlink" href="#tvb-simulator-demos-display-sensors-locations-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-display-subject-dataset-module">
+<h2>tvb.simulator.demos.display_subject_dataset module<a class="headerlink" href="#tvb-simulator-demos-display-subject-dataset-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-display-surface-local-connectivity-module">
+<h2>tvb.simulator.demos.display_surface_local_connectivity module<a class="headerlink" href="#tvb-simulator-demos-display-surface-local-connectivity-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-display-surface-parcellation-module">
+<h2>tvb.simulator.demos.display_surface_parcellation module<a class="headerlink" href="#tvb-simulator-demos-display-surface-parcellation-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-generate-region-demo-data-module">
+<h2>tvb.simulator.demos.generate_region_demo_data module<a class="headerlink" href="#tvb-simulator-demos-generate-region-demo-data-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-generate-surface-demo-data-module">
+<h2>tvb.simulator.demos.generate_surface_demo_data module<a class="headerlink" href="#tvb-simulator-demos-generate-surface-demo-data-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-gpu-parsweep-module">
+<h2>tvb.simulator.demos.gpu_parsweep module<a class="headerlink" href="#tvb-simulator-demos-gpu-parsweep-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-tvb.simulator.demos.mse_analyse_region">
+<span id="tvb-simulator-demos-mse-analyse-region-module"></span><h2>tvb.simulator.demos.mse_analyse_region module<a class="headerlink" href="#module-tvb.simulator.demos.mse_analyse_region" title="Permalink to this headline">¶</a></h2>
+<p>Demo use case: showing TVB flexibility. Set up a complete simulation and analysis 
+scheme imitating the exploratory workflow in studies from the  literature.
+See Fig. 9 in [1]</p>
+<p>The underlying idea is is based on [2] and [3] and probably should aim to finally
+reproduce [4].</p>
+<dl class="docutils">
+<dt>Background: </dt>
+<dd><p class="first">This demo should not be taken as an attempt to reproduce experimental results.
+It lacks from solid theoretical foundations. The background info is only
+to give a more scientifically interesting scenario and justify the choices
+of the observed nodes and such.</p>
+<p>When thinking about stimulation paradigms in the context of a whole brain 
+experimental protocol, the first ones that jump to my mind:</p>
+<blockquote>
+<div><ul class="simple">
+<li>face/object recognition.</li>
+<li>visually evoked potentials (VEP).</li>
+<li>trans-cranial magnetic stimulation (TMS).</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>The constraints: </dt>
+<dd><ul class="first last simple">
+<li>Make a demo as simple as possible and thus not including the sub-cortical
+structures. Many sensory inputs go first through the thalamus and then
+its projections reach the cortex.</li>
+<li>Directly stimulating the cortex with an arbitrary stimulus. Intensity 
+units are arbitrary.</li>
+</ul>
+</dd>
+</dl>
+<p>Finally, the stimulus is a Pulse Train with a frequency repetition of 4Hz. 
+This low value is the frequency used for flashing stimuli.  Visual stimuli 
+stimulate both primary visual and secondary visual areas (V1, V2)</p>
+<p class="last">Recordings from scalp: the mid-occipital electrode location (OZ) as in [2] and
+because we are stimulating the visual cortex.</p>
+</dd>
+<dt>Steps: </dt>
+<dd><ol class="first last arabic simple">
+<li>Set up basic simulation components</li>
+<li>Build a stimulation pattern</li>
+<li>Generate simulated data with and without stimulation.</li>
+<li>Compute MSE</li>
+<li>Plot results</li>
+</ol>
+</dd>
+<dt>Objective:</dt>
+<dd>Compare the complexity in the resting state against evoked activity, based
+on MSE computed on the EEG time-series from sensor Oz (occipital region).
+The scientific motivation is (would be) to evaluate how complexity changes as 
+a function of stimulation.</dd>
+<dt>Sim Info: </dt>
+<dd><p class="first">Node indices corresponding to left  temporal and visual cortices (30:36).
+- assuming the Connectivity matrix is the default with 74 nodes.</p>
+<p class="last">EEG electrode indice corresponding to O1, O2 and Oz (8, 9, 60).
+The EEG sensors represent 62 scalp electrodes distributed according to the 
+10–20 system.</p>
+</dd>
+<dt>[1] Sanz Leon P.; Woodman; M.; Knock; S.; (...); Jirsa, V. The Virtual Brain: a</dt>
+<dd>simulator of primate brain dynamics. Frontiers in Neuroinformatics.</dd>
+<dt>[2] McIntosh, A.; Kovacevic, N.; Lippe, S.; Garrett, D.; Grady, C. &amp; Jirsa, V. </dt>
+<dd>The Development of a Noisy Brain Archives Italiennes de Biologie, 2010, 148, -</dd>
+</dl>
+<p>[3] Schneider, G. E. Two visual systems. Science, 1969, 163, 895-902</p>
+<p>Recommended:</p>
+<p>[4] David, O. &amp; Friston, K. J. A neural mass model for MEG/EEG: coupling and 
+neuronal dynamics. Neuroimage.</p>
+<p>Total runtime ~ 10 min on Intel Xeon(R) CPU W3520 &#64; 2.67GHz</p>
+<p>SSVEP: Steady State Visually Evoked Potentials.  There is a number of points to be 
+determined. Selection of electrodes and stimulating frequencies, feature extraction 
+(MSE?), spectral methods. Lead position is important, however for VEPs, normally 
+electrode at the occipital region are selected.</p>
+<p>TCc &#8211;&gt; central temporal cortex                                                         
+TCi &#8211;&gt; inferior temporal cortex</p>
+<dl class="function">
+<dt id="tvb.simulator.demos.mse_analyse_region.build_stimulus">
+<tt class="descclassname">tvb.simulator.demos.mse_analyse_region.</tt><tt class="descname">build_stimulus</tt><big>(</big><em>white_matter</em><big>)</big><a class="headerlink" href="#tvb.simulator.demos.mse_analyse_region.build_stimulus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a rectangular pulse train using an Equation datatype</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tvb.simulator.demos.mse_analyse_region.compute_mse">
+<tt class="descclassname">tvb.simulator.demos.mse_analyse_region.</tt><tt class="descname">compute_mse</tt><big>(</big><em>xs_data</em>, <em>ys_data</em><big>)</big><a class="headerlink" href="#tvb.simulator.demos.mse_analyse_region.compute_mse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Not trying to be smart. Only computing MSE for two different time series.
+e.g
+x: resting state eeg
+y: evoked activity eeg</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tvb.simulator.demos.mse_analyse_region.configure_simulation">
+<tt class="descclassname">tvb.simulator.demos.mse_analyse_region.</tt><tt class="descname">configure_simulation</tt><big>(</big><em>stimulate</em><big>)</big><a class="headerlink" href="#tvb.simulator.demos.mse_analyse_region.configure_simulation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set up a Simulator object (a brain network model and all its individual 
+components + output modalities)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tvb.simulator.demos.mse_analyse_region.main">
+<tt class="descclassname">tvb.simulator.demos.mse_analyse_region.</tt><tt class="descname">main</tt><big>(</big><big>)</big><a class="headerlink" href="#tvb.simulator.demos.mse_analyse_region.main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tvb.simulator.demos.mse_analyse_region.plot_figure">
+<tt class="descclassname">tvb.simulator.demos.mse_analyse_region.</tt><tt class="descname">plot_figure</tt><big>(</big><em>se_x</em>, <em>se_y</em>, <em>eeg_data</em>, <em>tavg_data</em>, <em>rseeg</em>, <em>rstavg</em>, <em>pattern</em>, <em>nodes</em>, <em>eeg_nodes</em>, <em>time</em><big>)</big><a class="headerlink" href="#tvb.simulator.demos.mse_analyse_region.plot_figure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate figure as shown in [1].
+se_x: mse estimates for resting state like
+se_y: mse estimates for evoked activity
+eeg_data: evoked eeg
+tavg_data: evoked raw data
+rseeg: resting state eeg
+rstavg: resting state raw
+nodes:regions of interest
+eeg_nodes: sensors of itnerest
+time: time vector</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tvb.simulator.demos.mse_analyse_region.run_simulation">
+<tt class="descclassname">tvb.simulator.demos.mse_analyse_region.</tt><tt class="descname">run_simulation</tt><big>(</big><em>sim</em><big>)</big><a class="headerlink" href="#tvb.simulator.demos.mse_analyse_region.run_simulation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tvb.simulator.demos.mse_analyse_region.save_data">
+<tt class="descclassname">tvb.simulator.demos.mse_analyse_region.</tt><tt class="descname">save_data</tt><big>(</big><em>tavg_data</em>, <em>eeg_data</em>, <em>tavg_time</em>, <em>eeg_time</em>, <em>stimulus=None</em><big>)</big><a class="headerlink" href="#tvb.simulator.demos.mse_analyse_region.save_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save simulated data</p>
+</dd></dl>
+
+</div>
+<div class="section" id="tvb-simulator-demos-normalizing-model-dynamics-module">
+<h2>tvb.simulator.demos.normalizing_model_dynamics module<a class="headerlink" href="#tvb-simulator-demos-normalizing-model-dynamics-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-pca-analyse-view-region-module">
+<h2>tvb.simulator.demos.pca_analyse_view_region module<a class="headerlink" href="#tvb-simulator-demos-pca-analyse-view-region-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-pca-analyse-view-surface-module">
+<h2>tvb.simulator.demos.pca_analyse_view_surface module<a class="headerlink" href="#tvb-simulator-demos-pca-analyse-view-surface-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-region-deterministic-module">
+<h2>tvb.simulator.demos.region_deterministic module<a class="headerlink" href="#tvb-simulator-demos-region-deterministic-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-region-deterministic-smooth-parameter-variation-module">
+<h2>tvb.simulator.demos.region_deterministic_smooth_parameter_variation module<a class="headerlink" href="#tvb-simulator-demos-region-deterministic-smooth-parameter-variation-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-region-deterministic-stimulus-module">
+<h2>tvb.simulator.demos.region_deterministic_stimulus module<a class="headerlink" href="#tvb-simulator-demos-region-deterministic-stimulus-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-region-deterministic-stimulus-long-bold-module">
+<h2>tvb.simulator.demos.region_deterministic_stimulus_long_bold module<a class="headerlink" href="#tvb-simulator-demos-region-deterministic-stimulus-long-bold-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-region-stochastic-module">
+<h2>tvb.simulator.demos.region_stochastic module<a class="headerlink" href="#tvb-simulator-demos-region-stochastic-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-region-stochastic-jansen-module">
+<h2>tvb.simulator.demos.region_stochastic_jansen module<a class="headerlink" href="#tvb-simulator-demos-region-stochastic-jansen-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-region-stochastic-reducedwongwang-module">
+<h2>tvb.simulator.demos.region_stochastic_reducedwongwang module<a class="headerlink" href="#tvb-simulator-demos-region-stochastic-reducedwongwang-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-region-stochastic-simulation-continuation-bold-module">
+<h2>tvb.simulator.demos.region_stochastic_simulation_continuation_bold module<a class="headerlink" href="#tvb-simulator-demos-region-stochastic-simulation-continuation-bold-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-seeg-region-deterministic-module">
+<h2>tvb.simulator.demos.seeg_region_deterministic module<a class="headerlink" href="#tvb-simulator-demos-seeg-region-deterministic-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-seeg-surface-deterministic-module">
+<h2>tvb.simulator.demos.seeg_surface_deterministic module<a class="headerlink" href="#tvb-simulator-demos-seeg-surface-deterministic-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-surface-deterministic-module">
+<h2>tvb.simulator.demos.surface_deterministic module<a class="headerlink" href="#tvb-simulator-demos-surface-deterministic-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-surface-deterministic-custom-local-connectivity-module">
+<h2>tvb.simulator.demos.surface_deterministic_custom_local_connectivity module<a class="headerlink" href="#tvb-simulator-demos-surface-deterministic-custom-local-connectivity-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-surface-deterministic-stimulus-module">
+<h2>tvb.simulator.demos.surface_deterministic_stimulus module<a class="headerlink" href="#tvb-simulator-demos-surface-deterministic-stimulus-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-surface-deterministic-surface-stimulus-module">
+<h2>tvb.simulator.demos.surface_deterministic_surface_stimulus module<a class="headerlink" href="#tvb-simulator-demos-surface-deterministic-surface-stimulus-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tvb-simulator-demos-surface-stochastic-module">
+<h2>tvb.simulator.demos.surface_stochastic module<a class="headerlink" href="#tvb-simulator-demos-surface-stochastic-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-tvb.simulator.demos"></span></div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="index.html">home</a>|&nbsp;</li>
+        <li><a href="web_interface.html">web interface</a>|&nbsp;</li>
+	<li><a href="console_interface.html">console interface</a>|&nbsp;</li>
+	<li><a href="api.html">API</a>|&nbsp;</li>
+	<li><a href="https://github.com/the-virtual-brain">Developer (Github)</a>|&nbsp;</li>
+ 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, timpx.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+    </div>
+  </body>
+</html>

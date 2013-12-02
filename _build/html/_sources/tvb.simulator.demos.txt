@@ -1,0 +1,254 @@
+tvb.simulator.demos package
+===========================
+
+Submodules
+----------
+
+tvb.simulator.demos.connectivity_normalisation_modes module
+-----------------------------------------------------------
+
+.. automodule:: tvb.simulator.demos.connectivity_normalisation_modes
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.corrcoeff_analyse_view_region module
+--------------------------------------------------------
+
+.. automodule:: tvb.simulator.demos.corrcoeff_analyse_view_region
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.debug_device module
+---------------------------------------
+
+.. automodule:: tvb.simulator.demos.debug_device
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.display_region_connectivity module
+------------------------------------------------------
+
+.. automodule:: tvb.simulator.demos.display_region_connectivity
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.display_sensors_locations module
+----------------------------------------------------
+
+.. automodule:: tvb.simulator.demos.display_sensors_locations
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.display_subject_dataset module
+--------------------------------------------------
+
+.. automodule:: tvb.simulator.demos.display_subject_dataset
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.display_surface_local_connectivity module
+-------------------------------------------------------------
+
+.. automodule:: tvb.simulator.demos.display_surface_local_connectivity
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.display_surface_parcellation module
+-------------------------------------------------------
+
+.. automodule:: tvb.simulator.demos.display_surface_parcellation
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.generate_region_demo_data module
+----------------------------------------------------
+
+.. automodule:: tvb.simulator.demos.generate_region_demo_data
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.generate_surface_demo_data module
+-----------------------------------------------------
+
+.. automodule:: tvb.simulator.demos.generate_surface_demo_data
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.gpu_parsweep module
+---------------------------------------
+
+.. automodule:: tvb.simulator.demos.gpu_parsweep
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.mse_analyse_region module
+---------------------------------------------
+
+.. automodule:: tvb.simulator.demos.mse_analyse_region
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.normalizing_model_dynamics module
+-----------------------------------------------------
+
+.. automodule:: tvb.simulator.demos.normalizing_model_dynamics
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.pca_analyse_view_region module
+--------------------------------------------------
+
+.. automodule:: tvb.simulator.demos.pca_analyse_view_region
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.pca_analyse_view_surface module
+---------------------------------------------------
+
+.. automodule:: tvb.simulator.demos.pca_analyse_view_surface
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.region_deterministic module
+-----------------------------------------------
+
+.. automodule:: tvb.simulator.demos.region_deterministic
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.region_deterministic_smooth_parameter_variation module
+--------------------------------------------------------------------------
+
+.. automodule:: tvb.simulator.demos.region_deterministic_smooth_parameter_variation
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.region_deterministic_stimulus module
+--------------------------------------------------------
+
+.. automodule:: tvb.simulator.demos.region_deterministic_stimulus
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.region_deterministic_stimulus_long_bold module
+------------------------------------------------------------------
+
+.. automodule:: tvb.simulator.demos.region_deterministic_stimulus_long_bold
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.region_stochastic module
+--------------------------------------------
+
+.. automodule:: tvb.simulator.demos.region_stochastic
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.region_stochastic_jansen module
+---------------------------------------------------
+
+.. automodule:: tvb.simulator.demos.region_stochastic_jansen
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.region_stochastic_reducedwongwang module
+------------------------------------------------------------
+
+.. automodule:: tvb.simulator.demos.region_stochastic_reducedwongwang
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.region_stochastic_simulation_continuation_bold module
+-------------------------------------------------------------------------
+
+.. automodule:: tvb.simulator.demos.region_stochastic_simulation_continuation_bold
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.seeg_region_deterministic module
+----------------------------------------------------
+
+.. automodule:: tvb.simulator.demos.seeg_region_deterministic
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.seeg_surface_deterministic module
+-----------------------------------------------------
+
+.. automodule:: tvb.simulator.demos.seeg_surface_deterministic
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.surface_deterministic module
+------------------------------------------------
+
+.. automodule:: tvb.simulator.demos.surface_deterministic
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.surface_deterministic_custom_local_connectivity module
+--------------------------------------------------------------------------
+
+.. automodule:: tvb.simulator.demos.surface_deterministic_custom_local_connectivity
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.surface_deterministic_stimulus module
+---------------------------------------------------------
+
+.. automodule:: tvb.simulator.demos.surface_deterministic_stimulus
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.surface_deterministic_surface_stimulus module
+-----------------------------------------------------------------
+
+.. automodule:: tvb.simulator.demos.surface_deterministic_surface_stimulus
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tvb.simulator.demos.surface_stochastic module
+---------------------------------------------
+
+.. automodule:: tvb.simulator.demos.surface_stochastic
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: tvb.simulator.demos
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.10: http://docutils.sourceforge.net/" />
+<title>Connectivity</title>
+<link rel="stylesheet" href="styles/html4css1.css" type="text/css" />
+<link rel="stylesheet" href="styles/html_doc.css" type="text/css" />
+</head>
+<body>
+<div class="document" id="connectivity">
+<h1 class="title">Connectivity</h1>
+
+<p>In this area you can edit both types of TVB connectivity objects:</p>
+<blockquote>
+<ul class="simple">
+<li>long-range connectivity and,</li>
+<li>local connectivity.</li>
+</ul>
+</blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div class="figure align-center">
+<img alt="screenshots/connectivity_area.jpg" src="screenshots/connectivity_area.jpg" style="width: 90%;" />
+<p class="caption">Preview for Connectivity Area</p>
+</div>
+</blockquote>
+<div class="section" id="long-range-connectivity">
+<h1>Long Range Connectivity</h1>
+<blockquote>
+<div class="figure align-center">
+<img alt="screenshots/connectivity_large_scale.jpg" src="screenshots/connectivity_large_scale.jpg" style="width: 90%;" />
+<p class="caption">Large Scale Connectivity configuration page</p>
+</div>
+</blockquote>
+<p>From this page you can access:</p>
+<blockquote>
+<ul>
+<li><p class="first">an interactive display tool on the <cite>Control</cite> right column and</p>
+</li>
+<li><p class="first">several Long Range Connectivity visualizations on the left <cite>View</cite> column.</p>
+<blockquote>
+<ul class="simple">
+<li>3D Views<ul>
+<li>Edges</li>
+<li>Nodes</li>
+</ul>
+</li>
+<li>2D Projections<ul>
+<li>Left</li>
+<li>Right</li>
+<li>Top</li>
+</ul>
+</li>
+<li>a MPLH5 matrix plot</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<div class="section" id="connectivity-matrix-editor">
+<h2>Connectivity Matrix Editor</h2>
+<div class="figure align-center">
+<img alt="screenshots/connectivity_editor.jpg" src="screenshots/connectivity_editor.jpg" style="width: 90%;" />
+<p class="caption">Preview for the Matrix Editor</p>
+</div>
+<p>From the this 2D display allows you to:</p>
+<blockquote>
+<ul class="simple">
+<li>easily edit the connectivity (tract lengths) matrix, and</li>
+<li>create a modified version of your connectivity matrix</li>
+<li>select a small subset of nodes
+- perform basic algebraic operations on that group</li>
+<li>save all changes to use the new Connectivity object in a simulation.</li>
+</ul>
+</blockquote>
+<div class="hint">
+<p class="first admonition-title">Hint</p>
+<p>In the Matrix Editor only one quadrant is displayed at a time.
+You can select which quadrant is shown by accessing the quadrant selector
+button in the upper left corner of the matrix display.</p>
+<ul class="last">
+<li><p class="first">quadrants 1 and 4 are the intra-hemisphere connectivity weights,</p>
+</li>
+<li><p class="first">and quadrants 2 and 3 are the inter-hemisphere connectivity weights.</p>
+<div class="figure align-center">
+<img alt="screenshots/connectivity_quadrants.jpg" src="screenshots/connectivity_quadrants.jpg" style="width: 50%;" />
+</div>
+<p>Preview for Quadrant Selection</p>
+</li>
+</ul>
+</div>
+<p>The <strong>Weights</strong> button opens a menu that allows you to perform basic algebraic
+operations on a set of selected nodes specifying the edge type:</p>
+<blockquote>
+<ul class="simple">
+<li>Incoming --&gt; Incoming</li>
+<li>Incoming --&gt; Outgoing</li>
+<li>Outgoing --&gt; Incoming</li>
+<li>Outgoing --&gt; Outgoing</li>
+</ul>
+</blockquote>
+<!-- i.e., if the connection strengths to be modified are going out or coming in from/to the selected nodes. -->
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="figure align-center">
+<img alt="screenshots/connectivity3d_edges_operations.jpg" src="screenshots/connectivity3d_edges_operations.jpg" style="width: 90%;" />
+<p class="caption">Preview for Operations on a selection of nodes</p>
+</div>
+<div class="note">
+<p class="first admonition-title">Note</p>
+<p>Available operations are:</p>
+<ul class="last simple">
+<li>Assignation (set): assigns the given numeric value to all the nodes within
+the set.</li>
+<li>Addition (add): adds the new value to the current value in the connectivity
+matrix.</li>
+<li>Subtraction (decrease): subtracts the new value to the current value in the
+connectivity matrix.</li>
+<li>Multiplication (multiply): multiplies the current value in the connectivity
+matrix by the given numeric value.</li>
+<li>Division (divide): divides the current value in the connectivity matrix by
+the given numeric value.</li>
+</ul>
+</div>
+<p>Click on the <cite>Apply weight change</cite> button to perform the selected operation.</p>
+<div class="note">
+<p class="first admonition-title">Note</p>
+<p>TVB is designed to handle connectivity matrices whose values are:</p>
+<blockquote class="last">
+<ul class="simple">
+<li>positive real values, meaning that there is a connection, or</li>
+<li>zero values, meaning the absence of a connection</li>
+</ul>
+</blockquote>
+</div>
+<div class="warning">
+<p class="first admonition-title">Warning</p>
+<ul class="last simple">
+<li>TVB does not handle unknowns such as NaNs or Infs.</li>
+<li>If your connectivity matrix contains negative values, such as -1 values
+you should either set these values to zero or an estimated value based
+on your research assumptions.</li>
+</ul>
+</div>
+<p>By default the set includes all the available nodes in the connectivity matrix.</p>
+<blockquote>
+<div class="figure align-center">
+<img alt="screenshots/connectivity3d_newselection.jpg" src="screenshots/connectivity3d_newselection.jpg" style="width: 90%;" />
+<p class="caption">Preview for New Selection</p>
+</div>
+</blockquote>
+<p>You can create a smaller selection by clicking on the <cite>Quick-select</cite> button and
+editing the list of node names.</p>
+<div class="figure align-center">
+<img alt="screenshots/connectivity_quick_select.jpg" src="screenshots/connectivity_quick_select.jpg" style="width: 90%;" />
+<p class="caption">Preview for <cite>Quick-select</cite> list</p>
+</div>
+<p>TVB enables you to save:</p>
+<blockquote>
+<ul class="simple">
+<li>a particular selection by entering a name and clicking on <img alt="savetick" src="icons/save_tick.png" /> or,</li>
+<li>a new <cite>Connectivity</cite> object by clicking on <img alt="staricon" src="icons/star_icon.png" />. This entity can be
+used later on in <em>TheVirtualBrain</em> <cite>Simulator</cite>.</li>
+</ul>
+</blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="viewers">
+<h2>Viewers</h2>
+</div>
+<div class="section" id="connectivity-3d-edges">
+<h2>Connectivity 3D Edges</h2>
+<p>This connectivity visualizer allows you to see the structural information as a
+base model part of TVB.</p>
+<div class="figure align-center">
+<img alt="screenshots/connectivity3d.jpg" src="screenshots/connectivity3d.jpg" style="width: 50%;" />
+<p class="caption">Preview for Connectivity Viewer 3D Edges</p>
+</div>
+<p>The 3D semi-transparent surface arround the connectivity nodes, whether it is
+the cortical surface or the outer-skin, is used just for giving space guidance.</p>
+<p>You can select an individual node and right-click on it to activate the incoming
+or outgoing edges.</p>
+<p>For each node you can choose a different color to apply to its
+edges.</p>
+<div class="figure align-center">
+<img alt="screenshots/connectivity3d_coloredges.jpg" src="screenshots/connectivity3d_coloredges.jpg" style="width: 50%;" />
+<p class="caption">Preview for Connectivity Viewer 3D Edges - Coloring incoming / outgoing edges</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="connectivty-3d-nodes">
+<h2>Connectivty 3D Nodes</h2>
+<p>A 3D representation of the connectivity matrix nodes. (WebGL)</p>
+<p>Two specific connectivity node-metrics, (previously computed using one of BCT
+analyzers) can be used to independently set:</p>
+<blockquote>
+<ul class="simple">
+<li>the node color and</li>
+<li>the node size.</li>
+</ul>
+</blockquote>
+<div class="figure align-center">
+<img alt="screenshots/connectivity3d_viewer.jpg" src="screenshots/connectivity3d_viewer.jpg" style="width: 50%;" />
+<p class="caption">Preview for Connectivity 3D Viewer</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="connectivity-2d-viewer">
+<h2>Connectivity 2D Viewer</h2>
+<p>A 2D representation of the connectivity matrix nodes and edges.</p>
+<p>There are three main views (projections):</p>
+<blockquote>
+<ul class="simple">
+<li>Left sagittal view</li>
+<li>Transverse view</li>
+<li>Right sagittal view</li>
+</ul>
+</blockquote>
+<div class="figure align-center">
+<img alt="screenshots/connectivity2d_left.jpg" src="screenshots/connectivity2d_left.jpg" style="width: 50%;" />
+</div>
+<div class="figure align-center">
+<img alt="screenshots/connectivity2d_top.jpg" src="screenshots/connectivity2d_top.jpg" style="width: 50%;" />
+</div>
+<div class="figure align-center">
+<img alt="screenshots/connectivity2d_right.jpg" src="screenshots/connectivity2d_right.jpg" style="width: 50%;" />
+<p class="caption">Preview for Connectivity 2D Viewer</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The node size can be defined using a ConnectivityMeasure datatype
+(e.g. the output of a BCT Anlayzer). Additionally, a threshold can be set for
+the node color. The nodes with values above the threshold will be red and those
+whose value are below the threshold will be yellow.</p>
+<p>To display the changes, click on the <cite>Show details</cite> button.</p>
+<div class="figure align-center">
+<img alt="screenshots/connectivity2d_left_metrics.jpg" src="screenshots/connectivity2d_left_metrics.jpg" style="width: 50%;" />
+<p class="caption">Preview of 2D Connectivity Viewer (left lateral view). Node size is defined
+by the Participation Coefficient. Color threshold is 1.8; this values is based
+on the the Clustering Coefficient (BU) of the default Connectivity matrix.</p>
+</div>
+<div class="tip">
+<p class="first admonition-title">Tip</p>
+<blockquote>
+<p>If you wish to change:</p>
+<blockquote>
+<ul class="simple">
+<li>the color threshold,</li>
+<li>the metrics used to define the node features,</li>
+<li>the colormap used in the Connectivity Matrix Editor, or</li>
+<li>the Connectivity entity</li>
+</ul>
+</blockquote>
+</blockquote>
+<p>go to the <cite>brain</cite> menu on the top right corner</p>
+<div class="last figure align-center">
+<img alt="screenshots/connectivity_context_menu.jpg" src="screenshots/connectivity_context_menu.jpg" style="width: 50%;" />
+</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="matrix-overview">
+<h2>Matrix Overview</h2>
+<p>A 2D matrix plot to have a complete overview of the initially selected weighted
+connectivity matrix.</p>
+<div class="figure align-center">
+<img alt="screenshots/connectivity_mplh5.jpg" src="screenshots/connectivity_mplh5.jpg" style="width: 50%;" />
+<p class="caption">Preview for Matrix Overview display</p>
+</div>
+</div>
+</div>
+<div class="section" id="local-connectivity">
+<h1>Local Connectivity</h1>
+<p>In this page, you can generate the spatial profile of local connectivity that
+will be used in surface-based simulations.</p>
+<blockquote>
+<div class="figure align-center">
+<img alt="screenshots/connectivity_local.jpg" src="screenshots/connectivity_local.jpg" style="width: 90%;" />
+</div>
+<p>Local Connectivity editing page</p>
+</blockquote>
+<p>On the lower right of the browser you will have access to different
+functionalities by clicking on:</p>
+<blockquote>
+<ul>
+<li><p class="first"><cite>Create new Local Connectivity</cite> button: to generate the Local Connectivity entity.</p>
+</li>
+<li><p class="first"><cite>View Local Connectivity</cite> button: to launch a 3D brain visualizer displaying the spatial profile of the newly generated entity.</p>
+<blockquote>
+<div class="figure align-center">
+<img alt="screenshots/local_connectivity_viewer.jpg" src="screenshots/local_connectivity_viewer.jpg" style="width: 70%;" />
+</div>
+<p>Local Connectivity Viewer</p>
+</blockquote>
+</li>
+<li><p class="first"><cite>Edit Local Connectivity</cite> button: to go back to the main Local Connectivity editing page.</p>
+</li>
+</ul>
+</blockquote>
+<p>On the right column there is a display showing different estimations of the
+spatial profile based on the length of :</p>
+<blockquote>
+<ul>
+<li><p class="first">Theoretical case: is the ideal case.</p>
+</li>
+<li><p class="first">Most probable case: resolution is based on the mean length of the edges of the surface mesh.</p>
+</li>
+<li><p class="first">Worst case: resolution is based on the longest edge in the surface mesh.</p>
+</li>
+<li><p class="first">Best case: resolution is based on the shortest edge in the surface mesh.</p>
+<blockquote>
+<div class="figure align-center">
+<img alt="screenshots/local_connectivity_estimations.jpg" src="screenshots/local_connectivity_estimations.jpg" style="width: 70%;" />
+<p class="caption">Local connectivity profile estimations.</p>
+</div>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<p>and the red-dotted vertical line represents the cut-off distance.</p>
+<p>The x-axis range is automatically set to two times the cut-off distance.</p>
+</div>
+</div>
+</body>
+</html>
