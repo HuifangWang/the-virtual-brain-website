@@ -20,12 +20,7 @@ If you are interested in using the Console Interface, see :ref:`tutorials`
 
 You may want have a look at :ref:`a_description_of_a_complete_dataset` 
 
-
-
-**Contact**
-
-
-`Mailing list <https://groups.google.com/forum/#!forum/tvb-users>`_
+You have a question? `Mailing list <https://groups.google.com/forum/#!forum/tvb-users>`_
 
 
 
