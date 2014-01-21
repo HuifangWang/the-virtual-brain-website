@@ -211,11 +211,10 @@ the corresponding patch on the cortical/pial surface. For instance the 998 regio
 presented by Hagmann and colleagues (2008), are said to represent 1.5cm^2 patches. 
 
 ** What are the average orientations?
-For proper modelling  of M/EEG oriented proper current dipoles are required.
+For proper modelling  of M/EEG oriented current dipoles are required.
 Point/voxel-based approaches might be insufficient for M/EEG prediction, and therefore 
-orientations are obtained by using the cortical surface normals. 
-
-
+orientations are obtained by using the cortical surface normals (used by software tools
+like OpenMEEG and Fieldtrip to compute the leadfield matrix).
 
 **What is the parcellated connectome?**
 This term was introduced by the HCP, and it refers to the connectivity matrix.
