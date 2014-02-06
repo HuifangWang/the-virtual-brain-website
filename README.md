@@ -1,4 +1,5 @@
-source code for the-virtual-brain.github.io website.
+Source code for the-virtual-brain.github.io website
+===================================================
 
 To modify and rebuild the website:
 
